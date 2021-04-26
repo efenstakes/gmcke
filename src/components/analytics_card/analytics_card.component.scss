@@ -1,0 +1,26 @@
+@import '../../styles/theme';
+
+.analytics_card {
+    padding: 16px 12px;
+
+    width: 100%;
+    max-width: 320px;
+}
+
+.analytics_card__numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.analytics_card__numbers__analytics {
+    padding: 4px 10px;
+    border-radius: 8px;
+
+    background-color: $secondary_color;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
