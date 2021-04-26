@@ -1,0 +1,33 @@
+@import '../../styles/theme';
+
+
+// woo_section
+.woo_section {
+    // padding: 40px 16px;
+    background-color: lighten($primary_color, 55);
+    position: relative;
+}
+.woo_section__image_wrapper {
+    height: 300px;
+    width: 100%;
+
+    // background-color: darkgreen;
+
+    @media screen and (min-width: 720px) {
+        height: 400px;
+
+        display: flex;
+        justify-content: center;
+    }
+}
+.woo_section__image_wrapper__image {
+    object-fit: cover;
+    max-width: 400px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.woo_section__content {
+    position: relative;
+}
