@@ -1,0 +1,48 @@
+
+
+// remove all default margins and padding 
+// set box sizing to border box 
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+input, button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a, .app_link {
+  text-decoration: none;
+  color: inherit;
+}
+
+// disable image dragging or selection 
+img {  
+  max-width: 100%;
+  max-height: 100%;
+  user-drag: none;  
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+.section {
+  padding: 40px 16px;
+
+  @media screen and (min-width: 720px) {
+      // background-color: brown;
+      padding: 40px;
+  }
+}

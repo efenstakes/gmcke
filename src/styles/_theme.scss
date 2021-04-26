@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,700&family=Merriweather:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Rancho&display=swap');
+
+
+// set app colors FAD02C
+$primary_color: #1776BB;
+$primary_color_alt: lighten($primary_color, 20);
+$secondary_color: #E69500;
+$tertiary_color: #1776BB;
+
+$body_background: white; // #F9F9F9; 
+
+$white: #fff;
+$white_pewter: #E9EAEC;
+$black: #262223;
+$gray: gray;
+
+$secondary_text_color: lighten($black, 12);
+$success_background_color: lighten($primary_color, 8); // or #f5d65c
+
+$badge_color: $primary_color;
+$footer_color: $black;
