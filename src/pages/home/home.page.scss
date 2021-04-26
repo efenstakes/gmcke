@@ -1,0 +1,64 @@
+@import '../../styles/theme';
+
+
+
+// partners
+.partners_section {
+    // display: flex;
+    // align-items: center;
+}
+.partners_section__title {
+    text-align: center;
+}
+// partner card
+.partner_card {
+    width: 96px;
+    height: 80px;
+    margin-left: 64px;
+    // background-color: blue;
+
+    display: grid;
+    place-items: center;
+}
+.partner_card__image {
+    object-fit: cover;
+    width: 100%;
+    filter: grayscale(8);
+}
+
+
+// services
+.services_section {
+    background-color: lighten($primary_color, 55);
+}
+
+
+.section_title {
+    text-align: center;
+}
+.section_title_white {
+    @extend .section_title;
+    color: white;
+}
+
+
+// testimonials
+.testimonials_section {
+    position: relative;
+    
+    background-color: #2f2f2f;
+    // padding: 40px 0;
+
+    // max-height: 440px;
+    // overflow: hidden;
+}
+
+.analytics_section {
+    // padding: 0 16px;
+}
+
+.analytics_section__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
