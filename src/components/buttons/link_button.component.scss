@@ -1,0 +1,64 @@
+@import '../../styles/theme';
+
+
+.link_button {
+    font-size: .84rem;
+    font-weight: 700;
+    border-radius: 40px;
+    padding: 4px 20px;
+    
+    text-transform: none;
+    max-width: 440px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    @media screen and (min-width: 960px) {
+        padding: 6px 20px;
+    }
+}
+
+.link_button__primary {
+    background-color: $primary_color;
+    color: white;
+}
+
+.link_button__secondary {
+    background-color: $secondary_color;
+    color: white;
+}
+
+.link_button__outlined {
+    border: 1px solid $primary_color;
+    color: $primary_color;
+    background-color: white;
+}
+.link_button__outlined:hover {
+    border: 2px solid $primary_color; 
+}
+
+.link_button__text {
+    font-size: .9em;
+
+    @media screen and (min-width: 960px) {
+        font-size: 1em;
+    }
+}
+
+.link_button__start_icon, .link_button__end_icon {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link_button__start_icon {
+    margin-right: 6px;
+}
+.link_button__end_icon {
+    margin-left: 6px;
+}
