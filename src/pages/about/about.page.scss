@@ -1,0 +1,117 @@
+@import '../../styles/theme';
+@import '../../styles/resets';
+
+
+// common
+
+.about_section__image_wrapper {
+    margin-top: 20px;
+    width: 240px;
+    max-width: 80%;
+    height: 240px;
+    height: 100%;
+
+    position: relative;
+
+    // background-color: blueviolet;
+    
+    @media screen and (min-width: 720px) {
+        padding: 0 20px 0 40px;
+        width: 360px;
+        height: 360px;
+    }
+}
+
+.about_section__image_wrapper__image {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.about_section__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: 720px) {
+        padding: 0 20px;
+    }
+}
+
+
+
+// our story
+
+.our_story_section {}
+
+.our_story_section__image_wrapper {
+    @extend .about_section__image_wrapper;
+}
+
+.our_story_section__image_wrapper__image {
+    @extend .about_section__image_wrapper__image;
+}
+
+.our_story_section__content {
+    @extend .about_section__content;
+}
+
+
+
+// our mission
+.mission_vision_section {
+    background-color: lighten($primary_color, 55);
+}
+
+.mission_vision_section__grid {
+
+    @media screen and (min-width: 720px) {
+        flex-direction: row-reverse;
+    }
+}
+
+
+// our team
+.our_team_section {
+    background-color: lighten($primary_color, 55);
+}
+
+
+// our members
+.our_members_section__content__avatars {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    // display: grid;
+    // grid-template-columns: repeat(3, 80px);
+    // grid-gap: 16px;
+}
+
+.our_members_section__content__avatars__avatar {
+    object-fit: cover;
+
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+
+    margin: 0 16px 16px 0;
+
+    transition: 400ms;
+
+    @media screen and (min-width: 720px) {
+        height: 100px;
+        width: 100px;
+    }
+}
+.our_members_section__content__avatars__avatar:hover {
+    // filter: blur(.5px);
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.our_members_section__content__title {
+    color: $primary_color;
+}
