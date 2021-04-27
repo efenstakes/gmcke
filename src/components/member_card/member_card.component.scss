@@ -1,0 +1,52 @@
+@import '../../styles/theme';
+
+
+.member_card {
+    width: 100%;
+    // max-width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    position: relative;
+}
+
+.member_card__image_wrapper {
+    height: 200px;
+    width: 100%;
+}
+
+.member_card__image_wrapper__image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    
+    border-radius: 12px 12px 0 0;
+    
+}
+
+.member_card__content {
+    padding: 12px;
+
+    text-align: center;
+}
+
+.member_card__nt__title {
+    margin-left: 4px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.member_card__quote {
+    font-size: .8em;
+    font-weight: 500;
+    font-style: italic;
+}
+.member_card__quote::before {
+    content: '`';
+}
+
+.member_card__quote::after {
+    content: '`';
+}
