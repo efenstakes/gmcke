@@ -32,11 +32,6 @@
     }
 }
 
-.app_bar__link__active {
-    font-weight: 700;
-    color: $tertiary_color;
-}
-
 
 // mobile
 .app_bar_mobile__top {
@@ -61,10 +56,16 @@
     // padding: 0 16px;
     justify-content: space-evenly;
     // background-color: aqua;
-    color: $black;
+    color: lighten(black, 6);
 
     // background-color: yellow;
 
     font-weight: 600;
     padding-bottom: 10px;
+}
+
+
+.app_bar__link__active {
+    font-weight: 700;
+    color: $tertiary_color;
 }
