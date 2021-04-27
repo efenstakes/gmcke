@@ -22,7 +22,7 @@ ul {
 
 a, .app_link {
   text-decoration: none;
-  color: inherit;
+  // color: inherit;
 }
 
 // disable image dragging or selection 
@@ -45,4 +45,16 @@ img {
       // background-color: brown;
       padding: 40px;
   }
+}
+
+
+
+.section_title {
+  text-align: center;
+  color: $primary_color;
+}
+
+.section_title_white {
+  @extend .section_title;
+  color: white;
 }
