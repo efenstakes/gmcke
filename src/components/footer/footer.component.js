@@ -28,15 +28,24 @@ const FooterComponent = () => {
 
                     {/* phone */}
                     <div className="footer__contact_links__icon_link">
-                        <PhoneIcon />
+                        <PhoneIcon
+                            style={{
+                                fontSize: '1rem'
+                            }}
+                        />
                         <p className="footer__contact_links__icon_link__text"> 
                             +25400884983 
                         </p>
                     </div>
+                    <VSpacerComponent space={.5} />
                     
                     {/* email */}
                     <div className="footer__contact_links__icon_link">
-                        <EmailIcon />
+                        <EmailIcon 
+                            style={{
+                                fontSize: '1rem'
+                            }}
+                        />
                         <p className="footer__contact_links__icon_link__text"> 
                             gmc@gmail.com 
                         </p>
@@ -59,6 +68,7 @@ const FooterComponent = () => {
                         Apply
                     </Link>
                     </div>
+                    <VSpacerComponent space={.5} />
 
                     {/* about */}
                     <div>
