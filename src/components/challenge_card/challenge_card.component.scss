@@ -63,3 +63,18 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+
+.challenge_card__content__cta {
+    
+    @media screen and (min-width: 720px) {
+        display: flex;
+        justify-content: flex-end;
+        // background-color: red;
+        width: 95%;
+    }
+}
+
+.challenge_card__content__cta_alt {
+    justify-content: start;
+}

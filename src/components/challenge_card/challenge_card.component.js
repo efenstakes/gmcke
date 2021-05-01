@@ -50,14 +50,19 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                         { challenge.title }
                     </h3>
 
+                    <VSpacerComponent space={1} />
+
                     <p>
                         { challenge.text1 }
                     </p>
+                    
+                    <VSpacerComponent space={1} />
+
                     <p>
                         { challenge.text2 }
                     </p>
 
-                    <VSpacerComponent space={2} />
+                    <VSpacerComponent space={4} />
 
                     <h4>
                         Made For
@@ -77,22 +82,31 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                         }
                     </div>
                     
-                    <VSpacerComponent space={3} />
 
-                    <LinkButtonComponent
-                        to={`/apply?type=${challenge.title}`}
-                        text="Apply"
-                        endIcon={
-                            <ArrowForwardIosIcon
-                                style={{
-                                    fontSize: '.8rem',
-                                }}
-                            />
-                        }
-                        styles={{
-                            minWidth: '200px',
-                        }}
-                    />
+                    <VSpacerComponent space={4} />
+
+                    {/*  */}
+                    <div className={
+                        clsx({
+                            "challenge_card__content__cta": true,
+                            "challenge_card__content__cta_alt": isAlt,
+                        })
+                    }>
+                        <LinkButtonComponent
+                            to={`/apply?type=${challenge.title}`}
+                            text="Apply"
+                            endIcon={
+                                <ArrowForwardIosIcon
+                                    style={{
+                                        fontSize: '.8rem',
+                                    }}
+                                />
+                            }
+                            styles={{
+                                minWidth: '120px',
+                            }}
+                        />
+                    </div>
 
                 </div>
                 </Grid>
@@ -121,7 +135,7 @@ const MadeForChipComponent = ({ text })=> {
                 label={text}
                 size="small"
                 style={{
-                    padding: '4px 12px',
+                    padding: '6px 12px',
                 }}
             />
         </div>
