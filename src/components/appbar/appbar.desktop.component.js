@@ -94,6 +94,7 @@ const AppBarDesktopComponent = () => {
             <LinkButtonComponent
               to="/apply"
               text="Apply Now"
+              isSecondary={true}
             />
 
           </div>

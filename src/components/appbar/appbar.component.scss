@@ -12,8 +12,13 @@
 }
 
 .app_bar__logo {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
+
+    @media screen and (min-width: 600px) {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 .app_bar__links {
@@ -30,6 +35,12 @@
         transition: 400ms;
         // color: orangered;
     }
+    
+    .app_bar__link__active {
+        font-weight: 700;
+        color: $tertiary_color;
+    }
+
 }
 
 
@@ -62,10 +73,18 @@
 
     font-weight: 600;
     padding-bottom: 10px;
+
+    
+    .app_bar__link {
+        margin: 0 20px;
+        transition: 400ms;
+        // color: orangered;
+    }
+    
+    .app_bar__link__active {
+        font-weight: 700;
+        color: $tertiary_color;
+    }
+
 }
 
-
-.app_bar__link__active {
-    font-weight: 700;
-    color: $tertiary_color;
-}

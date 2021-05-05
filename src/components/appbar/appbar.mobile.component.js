@@ -47,6 +47,7 @@ const AppBarMobileComponent = () => {
                     <LinkButtonComponent
                         to="/apply"
                         text="Apply Now"
+                        isSecondary={true}
                     />
                 </div>
             </Toolbar>
@@ -58,10 +59,11 @@ const AppBarMobileComponent = () => {
                 <Link to='/' className={
                   clsx({
                     "app_link": true,
+                    "app_bar__link": true,
                     "app_bar__link__active": location.pathname === "/",
                   })
                 }>
-                    <p className="app_bar__link">
+                    <p className="">
                     Home
                     </p>
                 </Link>
@@ -70,10 +72,11 @@ const AppBarMobileComponent = () => {
                 <Link to='/challenges' className={
                   clsx({
                     "app_link": true,
+                    "app_bar__link": true,
                     "app_bar__link__active": location.pathname === "/challenges",
                   })
                 }>
-                    <p className="app_bar__link">
+                    <p className="">
                     Challenges
                     </p>
                 </Link>
@@ -82,10 +85,11 @@ const AppBarMobileComponent = () => {
                 <Link to='/about' className={
                   clsx({
                     "app_link": true,
+                    "app_bar__link": true,
                     "app_bar__link__active": location.pathname === "/about",
                   })
                 }>
-                    <p className="app_bar__link">
+                    <p className="">
                       About
                     </p>
                 </Link>
