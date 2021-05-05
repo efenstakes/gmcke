@@ -53,3 +53,16 @@
 .welcome_section__content__title {
     color: $secondary_color;
 }
+
+.welcome_section__content__text {
+    max-width: 560px;
+}
+
+
+.welcome_section__content__ctas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 440px;
+}

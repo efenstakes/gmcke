@@ -33,24 +33,35 @@ const WelcomeComponent = () => {
                         Revitalizing your
                     </h3>
                     {/* <VSpacerComponent space={.5} /> */}
-                    <h2 className="welcome_section__content__title">
+                    <h1 className="welcome_section__content__title">
                         Growth & Innovation
-                    </h2>
+                    </h1>
                     <VSpacerComponent space={1} />
-                    <p>
+                    <p className="welcome_section__content__text">
                         Let Great Minds Kenya help you transform your 
                         business. Create more talent, innovation and 
                         profits. Lets build your family.
                     </p>
                     <VSpacerComponent space={3} />
 
-                    <LinkButtonComponent
-                        to="/apply"
-                        text="Apply Now"
-                        styles={{
-                            maxWidth: '240px'
-                        }}
-                    />
+                    <div className="welcome_section__content__ctas">
+                        <LinkButtonComponent
+                            to="/apply"
+                            text="Apply Now"
+                            styles={{
+                                minWidth: '160px'
+                            }}
+                            isSecondary={true}
+                        />
+
+                        <LinkButtonComponent
+                            to="/apply"
+                            text="Learn More"
+                            styles={{
+                                minWidth: '160px'
+                            }}
+                        />
+                    </div>
                     
                 </div>
                 </Grid>
