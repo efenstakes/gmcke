@@ -11,15 +11,16 @@ const AnalyticsCardComponent = ({ data }) => {
     return (
         <Paper elevation={2} 
                style={{
-                   maxWidth: '320px'
+                   maxWidth: '320px',
+                //    alignSelf: 'center',
                }}>
             <div className="analytics_card">
 
                 <div className="analytics_card__numbers">
 
-                    <h2>
+                    <h1>
                         {data.number}
-                    </h2>
+                    </h1>
 
                     <div className="analytics_card__numbers__analytics">
                         <ShowChartIcon 
