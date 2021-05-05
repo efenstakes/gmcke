@@ -2,13 +2,13 @@
 
 
 .link_button {
-    font-size: .84rem;
+    font-size: .8rem;
     font-weight: 700;
     border-radius: 40px;
-    padding: 4px 20px;
+    padding: 6px 20px;
     
     text-transform: none;
-    max-width: 440px;
+    max-width: 320px;
 
     display: flex;
     flex-direction: row;
@@ -19,6 +19,7 @@
 
     @media screen and (min-width: 960px) {
         padding: 6px 20px;
+        max-width: 440px;
     }
 }
 
@@ -42,6 +43,7 @@
 }
 
 .link_button__text {
+    transform: translateY(-1px);
     font-size: .9em;
 
     @media screen and (min-width: 960px) {
