@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
@@ -26,6 +27,21 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
         expectation: '',   
         server: ''
     }
+
+    const services = [
+        {
+            text: "Service One",
+            value: "SERVICE ONE",
+        },
+        {
+            text: "Service Two",
+            value: "SERVICE TWO",
+        },
+        {
+            text: "Service Three",
+            value: "SERVICE THREE",
+        }
+    ]
 
     const [formData, setFormData] = useState(initial)
     const [errors, setErrors] = useState(initial)
@@ -56,7 +72,34 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
         <div className="apply_form">
 
             {/* select service */}
-            <FormControl component="fieldset">
+            <h4>
+                What service are you applying for?
+            </h4>
+            <VSpacerComponent space={2} />
+            {
+                services.map((svc)=> {
+
+                    return (
+                        <ServiceChoice
+                            text={svc.text}
+                            isSelected={
+                                formData.service === svc.value
+                            }
+                            onClick={
+                                ()=> setFormValue({
+                                    target: {
+                                        name: 'service',
+                                        value: svc.value,
+                                    }
+                                })
+                            }
+                        />
+                    )
+                })
+            }            
+
+            {/* select service */}
+            {/* <FormControl component="fieldset">
                 <FormLabel component="legend">
                     What service are you applying for?
                 </FormLabel>
@@ -73,12 +116,14 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
                         label="Service One"
                         labelPlacement="end"
                     />
+                    <br/>
                     <FormControlLabel
                         value="SERVICE TWO"
                         control={<Radio color="primary" />}
                         label="Service Two"
                         labelPlacement="end"
                     />
+                    <br/>
                     <FormControlLabel
                         value="SERVICE THREE"
                         control={<Radio color="primary" />}
@@ -86,8 +131,8 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
                         labelPlacement="end"
                     />
                 </RadioGroup>
-            </FormControl>
-            <VSpacerComponent space={2} />
+            </FormControl> */}
+            <VSpacerComponent space={4} />
 
             {/* name */}
             <TextInputComponent
@@ -182,6 +227,23 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
 ApplyFormComponent.propTypes = {
     setIsSuccessful: PropTypes.func.isRequired,
     setName: PropTypes.func.isRequired,
+}
+
+
+const ServiceChoice = ({ text, isSelected, onClick }) => {
+    return (
+        <div className={
+            clsx([
+                "service_choice",
+                {
+                    "service_choice__selected": isSelected,
+                }
+            ])
+        }
+        onClick={onClick}>
+            { text }
+        </div>
+    )
 }
 
 export default ApplyFormComponent
