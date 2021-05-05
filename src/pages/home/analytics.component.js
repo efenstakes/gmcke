@@ -37,12 +37,12 @@ const AnalyticsComponent = () => {
                     isOutlined={true}
                     styles={{
                         border: 'none',
-                        maxWidth: '200px'
+                        maxWidth: '120px'
                     }}
                 />
             </div>
 
-            <VSpacerComponent space={1} />
+            <VSpacerComponent space={2} />
 
             <Grid container>
 
@@ -52,7 +52,7 @@ const AnalyticsComponent = () => {
                             <Grid item xs={12} sm={6} md={4} key={index}
                                 style={{
                                     padding: '0 4px',
-                                    marginBottom: '10px'
+                                    marginBottom: '10px',
                                 }}>
                                 <AnalyticsCardComponent
                                     data={data}
