@@ -45,29 +45,30 @@ const WooComponent = () => {
                     <h3>
                         Want to Grow?
                     </h3>
-                    <p>
+                    <VSpacerComponent space={.5} />
+                    <p className="woo_section__content__text">
                         Transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.
                     </p>
                     <VSpacerComponent space={2} />
                     <LinkButtonComponent
                         to="/apply"
-                        text="Apply"
+                        text="Apply Now"
                         styles={{
                             maxWidth: '200px'
                         }}
                     />
                     
                     <VSpacerComponent space={4} />
-                    <h4>
+                    <h3>
                         OR
-                    </h4>
+                    </h3>
                     <VSpacerComponent space={4} />
                     
                     
-                    <p>
+                    <h3>
                         Get notified of more of our services.
-                    </p>
-                    <VSpacerComponent space={2} />
+                    </h3>
+                    <VSpacerComponent space={3} />
                     <TextInputComponent
                         placeholder="Enter your email"
                         labelText="Enter your email"
@@ -76,7 +77,7 @@ const WooComponent = () => {
                         onChange={ onEmailChanged }
                         styles={{
                             width: '320px',
-                            maxWidth: '80%',
+                            maxWidth: '90%',
                         }}
                     />
                     <br/>
