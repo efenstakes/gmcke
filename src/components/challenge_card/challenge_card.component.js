@@ -102,6 +102,7 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                                     }}
                                 />
                             }
+                            isSecondary={true}
                             styles={{
                                 minWidth: '120px',
                             }}
