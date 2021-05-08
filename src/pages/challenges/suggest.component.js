@@ -123,11 +123,12 @@ const SuggestionFilterComponent = ({ suggestion })=> {
         }}>
             <Link to={`#${suggestion}`} className="app_link">
                 <Chip
-                    color="primary"
+                    color="secondary"
                     label={suggestion}
                     style={{
                         cursor: 'pointer',
                         padding: '4px 12px',
+                        color: 'white',
                     }}
                 />
             </Link>
