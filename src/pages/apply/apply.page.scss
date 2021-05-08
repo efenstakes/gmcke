@@ -58,14 +58,14 @@
 
 .service_choice {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 12px;
     padding: 10px 16px;
     border-radius: 8px;
     border: 1px solid lighten($primary_color, 40);
 
-    font-size: .8rem;
+    font-size: .88rem;
     font-weight: 700;
 
     cursor: pointer;
@@ -78,7 +78,40 @@
     }
 }
 
-.service_choice__selected {
+.service_choice:hover {
+    background-color: lighten($primary_color, 50);
+}
+
+.service_choice__selected, .service_choice__selected:hover {
     background-color: $primary_color;
     color: white;
+}
+
+.service_choice__lean_more {
+    color: $primary_color;
+    font-size: .72rem;
+}
+.service_choice__lean_more__selected {
+    color: white;
+}
+
+.service_choice__extra {
+    margin: 10px 0 20px 0;
+    max-width: 440px;
+    padding: 10px;
+    font-size: .88rem;
+    border-radius: 8px;
+
+    background-color: lighten(lightgrey, 14);
+
+    transition: 200ms;
+    transform-origin: 0%;
+    transform: scale(1);
+}
+
+.service_choice__extra__open {
+    transform: scale(0);
+    height: 0;
+    margin: 0;
+    padding: 10px;
 }

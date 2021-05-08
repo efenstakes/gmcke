@@ -32,14 +32,29 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
         {
             text: "Service One",
             value: "SERVICE ONE",
+            text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            made_for: [
+                'Business', 'Individuals'
+            ],
         },
         {
             text: "Service Two",
             value: "SERVICE TWO",
+            text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            made_for: [
+                'Business', 'Individuals'
+            ],
         },
         {
             text: "Service Three",
             value: "SERVICE THREE",
+            text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            made_for: [
+                'Business', 'Individuals'
+            ],
         }
     ]
 
@@ -77,11 +92,12 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
             </h4>
             <VSpacerComponent space={2} />
             {
-                services.map((svc)=> {
+                services.map((svc, index)=> {
 
                     return (
                         <ServiceChoice
-                            text={svc.text}
+                            key={index}
+                            service={svc}
                             isSelected={
                                 formData.service === svc.value
                             }
@@ -97,41 +113,6 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
                     )
                 })
             }            
-
-            {/* select service */}
-            {/* <FormControl component="fieldset">
-                <FormLabel component="legend">
-                    What service are you applying for?
-                </FormLabel>
-                <RadioGroup 
-                    row aria-label="position" 
-                    name="service" 
-                    defaultValue="SERVICE ONE"
-                    value={formData.service}
-                    onChange={setFormValue}
-                >
-                    <FormControlLabel
-                        value="SERVICE ONE"
-                        control={<Radio color="primary" />}
-                        label="Service One"
-                        labelPlacement="end"
-                    />
-                    <br/>
-                    <FormControlLabel
-                        value="SERVICE TWO"
-                        control={<Radio color="primary" />}
-                        label="Service Two"
-                        labelPlacement="end"
-                    />
-                    <br/>
-                    <FormControlLabel
-                        value="SERVICE THREE"
-                        control={<Radio color="primary" />}
-                        label="Service Three"
-                        labelPlacement="end"
-                    />
-                </RadioGroup>
-            </FormControl> */}
             <VSpacerComponent space={4} />
 
             {/* name */}
@@ -230,8 +211,11 @@ ApplyFormComponent.propTypes = {
 }
 
 
-const ServiceChoice = ({ text, isSelected, onClick }) => {
+const ServiceChoice = ({ service, isSelected, onClick, text1, text2, }) => {
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
+        <>
         <div className={
             clsx([
                 "service_choice",
@@ -241,8 +225,43 @@ const ServiceChoice = ({ text, isSelected, onClick }) => {
             ])
         }
         onClick={onClick}>
-            { text }
+            <p>
+                { service.text }
+            </p>
+            <p className={
+                clsx([
+                    "service_choice__lean_more",
+                    {
+                        "service_choice__lean_more__selected": isSelected,
+                    }
+                ])
+            }
+               onClick={
+                   ()=> {
+                       console.log('toggle learn more')
+                       setIsOpen(!isOpen)
+                   }
+               }>
+                { isOpen ? 'See Less' : 'Learn More' }
+            </p>
         </div>
+
+        <div className={
+                clsx([
+                    "service_choice__extra",
+                    { "service_choice__extra__open": isOpen }
+                ])
+            }
+        >
+            <p>
+                {service.text1}
+            </p>
+            <VSpacerComponent space={.5}/>
+            <p>
+                {service.text2}
+            </p>
+        </div>
+        </>
     )
 }
 
