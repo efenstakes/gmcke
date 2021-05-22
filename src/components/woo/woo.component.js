@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
+import validator from 'validator'
 
 import { 
     Grid, FormControl, RadioGroup, FormControlLabel,
     Radio,
 } from '@material-ui/core'
+
+import Alert from '@material-ui/lab/Alert'
+
 
 import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
 import LinkButtonComponent from '../../components/buttons/link_button.component'
@@ -14,17 +18,78 @@ import img_1 from '../../assets/images/1.png'
 
 import './woo.component.scss'
 
+const initial = {
+    email: '',
+    type: 'Individual',
+    server: ''
+}
 const WooComponent = () => {
-    const [email, setEmail] = useState('')
-    const [isBusiness, setIsBusiness] = useState(true)
+    const [formData, setFormData] = useState(initial)
+    const [errors, setErrors] = useState(initial)
+    const [isLoading, setIsLoading] = useState(false)
+    const [isSuccessful, setIsSuccessful] = useState(false)
 
-    const subscribe = ()=> {
-        console.log('subscribe')
+    
+    const setFormValue = (event)=> {
+        const target = event.target
+        const value = target.type === 'checkbox' ? target.checked : target.value
+        const name = target.name
+    
+        setFormData({ ...formData, [name]: value })
+    }// setFormValue
+
+    const subscribe = async ()=> {
+        setErrors(initial)
+        const url = 'https://thawing-plains-83115.herokuapp.com/mail'
+
+        setIsLoading(true)
+
+        if ( validator.isEmpty(formData.email) ) {
+            setErrors((state)=> {
+                return { ...state, email: 'Email cannot be empty' }
+            })
+            return 
+        }        
+        if ( validator.isEmail(formData.email) ) {
+            setErrors((state)=> {
+                return { ...state, email: 'Email should be valid' }
+            })
+            return 
+        }
+        
+        const request = await fetch(url, {
+            method: 'post',
+            body: JSON.stringify(formData)
+        })
+        
+        if( request.status != 200 ) {
+            setIsLoading(false)
+            setErrors((state)=> {
+                return {
+                    ...state, 
+                    server: 'Error. Try again after a while'
+                }
+            })
+            return
+        }
+
+        const response = await request.json() 
+        
+        if( !response['sent'] ) {
+            setIsLoading(false)
+            setErrors((state)=> {
+                return {
+                    ...state, 
+                    server: 'Error. Try again after a while'
+                }
+            })
+            return
+        }
+
+        setIsLoading(false)
+        setIsSuccessful(true)
     }// subscribe
 
-    const onEmailChanged = ({ target })=> {
-        setEmail(target.value)
-    }// onEmailChanged
 
     return (
         <div className="section woo_section">
@@ -73,8 +138,10 @@ const WooComponent = () => {
                         placeholder="Enter your email"
                         labelText="Enter your email"
                         labelWidth={124}
-                        value={email}
-                        onChange={ onEmailChanged }
+                        value={formData.email}
+                        errorText={errors.email}
+                        onChange={ setFormValue }
+                        name="email"
                         styles={{
                             width: '320px',
                             maxWidth: '90%',
@@ -82,7 +149,13 @@ const WooComponent = () => {
                     />
                     <br/>
                     <FormControl component="fieldset">
-                        <RadioGroup row aria-label="position" name="position" defaultValue="Corporate">
+                        <RadioGroup 
+                                row 
+                                aria-label="position" 
+                                name="type" 
+                                defaultValue="Corporate"
+                                onChange={setFormValue}
+                        >
                             <FormControlLabel
                                 value="Corporate"
                                 control={<Radio color="primary" />}
@@ -105,8 +178,18 @@ const WooComponent = () => {
                     </FormControl>
                     <VSpacerComponent space={2} />
                     
+                    {
+                        errors.server && 
+                        <>
+                            <Alert severity="warning">{ errors.server }</Alert>
+                            <VSpacerComponent space={2} />
+                        </>
+                    }
+
                     <ButtonComponent
-                        text="Subscribe"
+                        text={
+                            isLoading ? 'Subscribing...' : 'Subscribe'
+                        }
                         onClick={subscribe}
                         styles={{
                             minWidth: '200px'

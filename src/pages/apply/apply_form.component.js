@@ -12,6 +12,8 @@ import PersonIcon from '@material-ui/icons/Person';
 import EmailIcon from '@material-ui/icons/Email';
 import EditIcon from '@material-ui/icons/Edit';
 
+import Alert from '@material-ui/lab/Alert'
+
 
 import ButtonComponent from '../../components/buttons/button.component'
 import TextInputComponent from '../../components/inputs/text_input.component'
@@ -60,6 +62,7 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
 
     const [formData, setFormData] = useState(initial)
     const [errors, setErrors] = useState(initial)
+    const [isLoading, setIsLoading] = useState(false)
 
 
     const setFormValue = (event)=> {
@@ -78,9 +81,44 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
         this.setState({ [name]: file })
     }// onFileChange
 
-    const onSubmit = ()=> {
+    const onSubmit = async ()=> {
+        setErrors(initial)
+        const url = 'https://thawing-plains-83115.herokuapp.com/mail'
+
+        setIsLoading(true)
+        console.log('formData ', formData)
+        return
+        const request = await fetch(url, {
+            method: 'post',
+            body: JSON.stringify(formData)
+        })
+        
+        if( request.status != 200 ) {
+            setIsLoading(false)
+            setErrors((state)=> {
+                return {
+                    ...errors, 
+                    server: 'Error. Try again after a while'
+                }
+            })
+            return
+        }
+
+        const response = await request.json() 
+        
+        if( !response['sent'] ) {
+            setIsLoading(false)
+            setErrors((state)=> {
+                return {
+                    ...errors, 
+                    server: 'Error. Try again after a while'
+                }
+            })
+            return
+        }
+
+        setIsLoading(false)
         setIsSuccessful(true)
-        setName('Jean')
     }// onSubmit
 
     return (
@@ -123,6 +161,7 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
                 placeholder="Enter your name or company name"
                 labelText="Enter your name or company name"
                 labelWidth={260}
+                errorText={errors.name}
                 startAdornment={
                     <PersonIcon />
                 }
@@ -138,6 +177,7 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
                 placeholder="Enter your email or company email"
                 labelText="Enter your email or company email"
                 labelWidth={260}
+                errorText={errors.email}
                 startAdornment={
                     <EmailIcon />
                 }
@@ -182,6 +222,7 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
                 placeholder="What are your expectation from GMC"
                 labelText="What are your expectation from GMC"
                 labelWidth={270}
+                errorText={errors.expectation}
                 multiline={true}
                 rows={4}
                 startAdornment={
@@ -190,10 +231,20 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
             />
             <VSpacerComponent space={2} />
 
+            {
+                errors.server && 
+                <>
+                    <Alert severity="warning">{ errors.server }</Alert>
+                    <VSpacerComponent space={2} />
+                </>
+            }
+
 
             {/* cta */}
             <ButtonComponent
-                text="Apply Now"
+                text={
+                    isLoading ? "Sending Application" : "Apply Now"
+                }
                 onClick={onSubmit}
                 styles={{
                     minWidth: '200px',
@@ -211,20 +262,26 @@ ApplyFormComponent.propTypes = {
 }
 
 
-const ServiceChoice = ({ service, isSelected, onClick, text1, text2, }) => {
+const ServiceChoice = ({ service, isSelected, onClick, }) => {
     const [isOpen, setIsOpen] = useState(false)
 
+    if ( isOpen ) {
+        console.log('service ', service.text,' open')
+    } else {
+        console.log('service ', service.text,' closed')
+    }
     return (
         <>
         <div className={
-            clsx([
-                "service_choice",
-                {
-                    "service_choice__selected": isSelected,
-                }
-            ])
-        }
-        onClick={onClick}>
+                clsx([
+                    "service_choice",
+                    {
+                        "service_choice__selected": isSelected,
+                    }
+                ])
+            }
+            onClick={onClick}
+        >
             <p>
                 { service.text }
             </p>
