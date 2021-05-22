@@ -30,17 +30,16 @@ const WelcomeComponent = () => {
                 <div className="welcome_section__content">
                 
                     <h3>
-                        Revitalizing your
+                        Reimagine
                     </h3>
                     {/* <VSpacerComponent space={.5} /> */}
                     <h1 className="welcome_section__content__title">
-                        Growth & Innovation
+                        Growth & Balance
                     </h1>
                     <VSpacerComponent space={1} />
                     <p className="welcome_section__content__text">
-                        Let Great Minds Kenya help you transform your 
-                        business. Create more talent, innovation and 
-                        profits. Lets build your family.
+                        Walking with doers and dreamers to help accelerate 
+                        growth and overcome fear of failure.
                     </p>
                     <VSpacerComponent space={3} />
 

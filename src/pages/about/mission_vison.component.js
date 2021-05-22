@@ -23,31 +23,19 @@ const MissionVisonComponent = () => {
                     <VSpacerComponent space={1} />
 
                     <p>
-                        Etiam a commodo velit, sed varius eros. 
-                        Proin et dignissim nisl. Etiam aliquam 
-                        sodales pharetra. Duis vulputate tortor 
-                        nunc, ultricies ultricies tortor 
-                        hendrerit a. Nullam laoreet fermentum 
-                        iaculis. Sed pharetra scelerisque ligula, 
-                        a pretium felis iaculis a. Proin tempor, 
-                        lectus sit amet auctor tempus.
+                        Inspire agents of transformation in 
+                        business and society by challenging 
+                        mindsets and aspects of life using cutting 
+                        edge tools. 
                     </p>
                     <VSpacerComponent space={3} />
 
                     
-                    <h3> Mission </h3>
+                    <h3> Vision </h3>
                     <VSpacerComponent space={1} />
 
                     <p>
-                        Donec tincidunt euismod fringilla. 
-                        Phasellus eu vehicula nulla, vulputate 
-                        dapibus felis. Sed ut purus in turpis 
-                        aliquam porta ac eu eros. Vestibulum 
-                        mattis eu orci ac euismod. Cras ut orci 
-                        elit. In suscipit euismod ex vel 
-                        sollicitudin. Maecenas efficitur ex 
-                        aliquet, tincidunt neque sed, blandit 
-                        urna.
+                        Become the epicenter of significance in Africa. 
                     </p>
 
                 </div>

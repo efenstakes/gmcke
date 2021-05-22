@@ -25,22 +25,19 @@ const WhyUsComponent = () => {
                         <VSpacerComponent space={1} />
 
                         <p>
-                            Etiam a commodo velit, sed varius eros. 
-                            Proin et dignissim nisl. Etiam aliquam 
-                            sodales pharetra. Duis vulputate tortor 
-                            nunc, ultricies ultricies tortor 
-                            hendrerit a. Nullam laoreet fermentum 
-                            iaculis. Sed pharetra scelerisque ligula, 
-                            a pretium felis iaculis a. Proin tempor, 
-                            lectus sit amet auctor tempus.
+                            We are continuously and consciously 
+                            providing an enriching safe space, for 
+                            self-mastery, conscious living and 
+                            healing to achieve greatness commencing 
+                            with the largest population in Africa. 
                         </p>
-                        <VSpacerComponent space={2} />
+                        {/* <VSpacerComponent space={2} />
                         <p>
                             Donec tincidunt euismod fringilla. 
                             Phasellus eu vehicula nulla, vulputate 
                             dapibus felis. Sed ut purus in turpis 
                             aliquam porta ac eu eros. 
-                        </p>
+                        </p> */}
 
                     </div>
                 </Grid>

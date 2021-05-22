@@ -19,12 +19,25 @@ import img_1 from '../../assets/images/p1.jpg'
 import img_2 from '../../assets/images/p2.jpg'
 import img_3 from '../../assets/images/p3.jpg'
 
+import i1 from '../../assets/inspiration/another.jpg'
+import i2 from '../../assets/inspiration/jane ngige.jpg'
+import i3 from '../../assets/inspiration/ruthie rono.jpg'
+import i4 from '../../assets/inspiration/vimal shah.jpg'
+import i5 from '../../assets/inspiration/wahu kagwi.jpg'
+
+import c1 from '../../assets/coaches/decimar ogutu.jpg'
+import c2 from '../../assets/coaches/susan wamae.jpg'
+
+
 import './about.page.scss'
 
 
 const AboutPage = () => {
     const avatars = [
-        img_1, img_2, img_3, img_2, img_2, img_1, img_3,
+        c1, c2,
+    ]
+    const inspiration = [
+        i1, i2, i3, i4, i5
     ]
 
 
@@ -62,7 +75,7 @@ const AboutPage = () => {
             {/* board of inspiration */}
             <OurMembersComponent 
                 title="Board Of Inspiration"
-                avatars={avatars}
+                avatars={inspiration}
                 sectionImageUrl={img_11}
             />
             <VSpacerComponent space={6} />

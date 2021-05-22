@@ -11,17 +11,17 @@ const AnalyticsComponent = () => {
         {
             number: 2400,
             rise: 150,
-            who: 'Total Population'
+            who: 'Total Participants'
         },
         {
-            number: 2400,
-            rise: 150,
+            number: 6,
+            rise: 3,
             who: 'Total Companies'
         },
         {
-            number: 2400,
-            rise: 150,
-            who: 'Total Individuals'
+            number: 4,
+            rise: 1,
+            who: 'Tools'
         }
     ]
     return (

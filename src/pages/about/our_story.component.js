@@ -21,16 +21,18 @@ const OurStoryComponent = () => {
                         <VSpacerComponent space={1} />
 
                         <p>
-                            Etiam a commodo velit, sed varius eros. 
-                            Proin et dignissim nisl. Etiam aliquam 
-                            sodales pharetra. Duis vulputate tortor 
-                            nunc, ultricies ultricies tortor 
-                            hendrerit a. Nullam laoreet fermentum 
-                            iaculis. Sed pharetra scelerisque ligula, 
-                            a pretium felis iaculis a. Proin tempor, 
-                            lectus sit amet auctor tempus.
+                            We believe that nurturing talents with 
+                            integrity, new mindsets, values and 
+                            character is key to attaining strategy 
+                            and purpose of individuals or 
+                            organizations and nations at large. We 
+                            also believe that investing in talents 
+                            through cutting edge tools is in line 
+                            with any future-proof organization’s 
+                            purpose to be driven by People, Planet 
+                            and Prosperity. 
                         </p>
-                        <VSpacerComponent space={2} />
+                        {/* <VSpacerComponent space={2} />
                         <p>
                             Donec tincidunt euismod fringilla. 
                             Phasellus eu vehicula nulla, vulputate 
@@ -41,7 +43,7 @@ const OurStoryComponent = () => {
                             sollicitudin. Maecenas efficitur ex 
                             aliquet, tincidunt neque sed, blandit 
                             urna.
-                        </p>
+                        </p> */}
 
                     </div>
                 </Grid>

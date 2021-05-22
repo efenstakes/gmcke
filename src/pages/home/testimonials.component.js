@@ -18,14 +18,14 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 const TestimonialsComponent = () => {
     const testimonials_list = [
         {
-            text: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            who: 'Jim Mwezi', 
-            who_title: 'CEO'       
+            text: 'Great Minds is unique platform for any business conscious and purpose driven organization that aims at making impact for people, planet and prosperity.',
+            who: 'Mr. Vimal Shah', 
+            who_title: 'Chairman Bidco Group Africa'       
         },
         {
-            text: 'you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            who: 'Liza Kazi', 
-            who_title: 'CEO'       
+            text: 'Great Minds has a unique approach to enhance solution acceleration, our experience has been outstanding.',
+            who: 'Dr. Bahaa Eddine Sarroukh', 
+            who_title: 'Philips Helath Innovation Lead'       
         },
         {
             text: 'transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',

@@ -8,9 +8,10 @@ import MemberCardComponent from '../../components/member_card/member_card.compon
 
 
 //
-import img_1 from '../../assets/images/p1.jpg'
-import img_2 from '../../assets/images/p2.jpg'
-import img_3 from '../../assets/images/p2.jpg'
+import img_1 from '../../assets/images/1.png'
+import hilda from '../../assets/images/hilda.jpg'
+import charles from '../../assets/images/charles.jpg'
+import peter_2 from '../../assets/images/peter_2.jpg'
 
 import './about.page.scss'
 
@@ -25,14 +26,20 @@ const OurTeamComponent = () => {
         {
             name: 'Peter Kinyanjui',
             title: 'CEO',
-            quote: 'Im Peter Kinyanjui and this is my quote and its good',
-            imageUrl: img_2
+            quote: 'The powerful journey of connection, self-discovery and purpose is a narrow road not walked by many; I have however came to realise and appreciate that it is a never-ending journey that requires  family and in the long run a community of believers.',
+            imageUrl: peter_2
         },
         {
-            name: 'Hilda Lastname',
+            name: 'Kiago Hilda',
             title: 'CEO',
-            quote: 'Im Hilda Lastname and this is my quote and its good',
-            imageUrl: img_3
+            quote: 'Im Hilda and this is my quote and its good',
+            imageUrl: hilda
+        },
+        {
+            name: 'Kaunda Charles',
+            title: 'CEO',
+            quote: 'How we work with our clients is nothing short of poetic, but what our clients create & provide for society, well that’s poetry in motion!',
+            imageUrl: charles
         },
     ]
 
@@ -49,7 +56,7 @@ const OurTeamComponent = () => {
                     members.map((mbr, index)=> {
 
                         return (
-                            <Grid item xs={12} sm={6} md={4} key={index}>
+                            <Grid item xs={12} sm={6} md={3} lg={3} key={index}>
                                 <MemberCardComponent
                                     member={mbr}
                                 />
