@@ -8,6 +8,7 @@ import HomePage from './pages/home/home.page'
 import ChallengesPage from './pages/challenges/challenges.page'
 import ApplyPage from './pages/apply/apply.page'
 import AboutPage from './pages/about/about.page'
+import InquirePage from './pages/inquire/inquire.page'
 
 
 function App() {
@@ -28,14 +29,19 @@ function App() {
 
         <Switch>
 
-          {/* challenges */}
-          <Route exact path="/challenges"
+          {/* solutions */}
+          <Route exact path="/solutions"
             component={ChallengesPage}
           />
           
           {/* apply */}
           <Route exact path="/apply" 
             component={ApplyPage} 
+          />
+          
+          {/* inquire */}
+          <Route exact path="/inquire" 
+            component={InquirePage} 
           />
           
           {/* About */}
