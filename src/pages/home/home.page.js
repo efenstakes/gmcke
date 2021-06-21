@@ -1,5 +1,5 @@
 import React from 'react'
-
+import YouTube from 'react-youtube';
 
 import FooterComponent from '../../components/footer/footer.component'
 import AppBarComponent from '../../components/appbar/appbar.component'
@@ -13,6 +13,7 @@ import WooComponent from '../../components/woo/woo.component'
 
 
 import './home.page.scss'
+import InActionComponent from './in_action.component'
 
 
 const HomePage = () => {
@@ -26,14 +27,19 @@ const HomePage = () => {
             <WelcomeComponent />
             <VSpacerComponent space={6} />
             
-            {/* analytics section */}
-            <AnalyticsComponent />
+            {/* in action section */}
+            <InActionComponent />
             <VSpacerComponent space={6} />
+            
+            {/* analytics section */}
+            {/* <AnalyticsComponent />
+            <VSpacerComponent space={6} /> */}
             
             {/* services section */}
             <ServicesComponent />
             <VSpacerComponent space={6} />
             
+
             {/* testimonials section */}
             <TestimonialsComponent />
             <VSpacerComponent space={6} />

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 import ServiceCardComponent from '../../components/service_card/service_card.component'
 import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
@@ -39,11 +39,13 @@ const ServicesComponent = () => {
             {
                 service_list.map((service, index)=> {
                     return (
-                        <ServiceCardComponent
-                            key={index}
-                            service={service}
-                            isAlt={ (index%2) === 1 }
-                        />
+                        <Link to={`/solutions/#${service.title}`} key={index} >
+                            <ServiceCardComponent
+                                key={index}
+                                service={service}
+                                isAlt={ (index%2) === 1 }
+                            />
+                        </Link>
                     )
                 })
             }
