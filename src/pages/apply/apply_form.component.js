@@ -22,7 +22,7 @@ import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
 
 const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
     const initial = {
-        service: 'SERVICE ONE',
+        solutions: 'Performance and Learning',
         name: '',
         email: '',
         company_or_individual: 'INDIVIDUAL',
@@ -30,35 +30,48 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
         server: ''
     }
 
-    const services = [
+    const solutions = [
         {
-            text: "Service One",
-            value: "SERVICE ONE",
+            title: 'Performance and Learning',
             text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            highlights: [
+                'Team & individual Clarity4D personality profiling',
+                'Team and individual 360 feedback',
+                'Team dynamics performance report',
+                'Conversation, synergizing and goals setting',
+            ],
             made_for: [
                 'Business', 'Individuals'
             ],
         },
         {
-            text: "Service Two",
-            value: "SERVICE TWO",
+            title: 'Coaching',
             text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            highlights: [
+                'Executive Coaching',
+                'ScanCoaching',
+                'Family or organizational system therapy',
+                'Individual and team coaching'
+            ],
             made_for: [
                 'Business', 'Individuals'
             ],
         },
         {
-            text: "Service Three",
-            value: "SERVICE THREE",
+            title: 'Business advisory',
             text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            highlights: [
+                'Value and character based leadership',
+                'Clear communication in color',
+                'Process & performance innovation',
+                'Change management with purpose',
+            ],
             made_for: [
                 'Business', 'Individuals'
             ],
-        }
+        },
     ]
+
 
     const [formData, setFormData] = useState(initial)
     const [errors, setErrors] = useState(initial)
@@ -87,7 +100,7 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
 
         setIsLoading(true)
         console.log('formData ', formData)
-        return
+        // return
         const request = await fetch(url, {
             method: 'post',
             body: JSON.stringify(formData)
@@ -126,24 +139,24 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
 
             {/* select service */}
             <h4>
-                What service are you applying for?
+                What solution are you applying for?
             </h4>
             <VSpacerComponent space={2} />
             {
-                services.map((svc, index)=> {
+                solutions.map((solution, index)=> {
 
                     return (
                         <ServiceChoice
                             key={index}
-                            service={svc}
+                            solutions={solution}
                             isSelected={
-                                formData.service === svc.value
+                                formData.solution === solution.value
                             }
                             onClick={
                                 ()=> setFormValue({
                                     target: {
-                                        name: 'service',
-                                        value: svc.value,
+                                        name: 'solutions',
+                                        value: solution.value,
                                     }
                                 })
                             }
@@ -262,13 +275,13 @@ ApplyFormComponent.propTypes = {
 }
 
 
-const ServiceChoice = ({ service, isSelected, onClick, }) => {
+const ServiceChoice = ({ solution, isSelected, onClick, }) => {
     const [isOpen, setIsOpen] = useState(false)
 
     if ( isOpen ) {
-        console.log('service ', service.text,' open')
+        console.log('solutions ', solution.text,' open')
     } else {
-        console.log('service ', service.text,' closed')
+        console.log('solutions ', solution.text,' closed')
     }
     return (
         <>
@@ -283,7 +296,7 @@ const ServiceChoice = ({ service, isSelected, onClick, }) => {
             onClick={onClick}
         >
             <p>
-                { service.text }
+                { solution.text }
             </p>
             <p className={
                 clsx([
@@ -311,11 +324,11 @@ const ServiceChoice = ({ service, isSelected, onClick, }) => {
             }
         >
             <p>
-                {service.text1}
+                {solution.text1}
             </p>
             <VSpacerComponent space={.5}/>
             <p>
-                {service.text2}
+                {solution.text2}
             </p>
         </div>
         </>
