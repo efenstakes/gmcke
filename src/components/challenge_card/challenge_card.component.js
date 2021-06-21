@@ -3,8 +3,12 @@ import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
 import { Grid, Chip } from '@material-ui/core'
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-
+import InfoIcon from '@material-ui/icons/Info';
 
 import LinkButtonComponent from '../buttons/link_button.component'
 import VSpacerComponent from '../v_spacer/v_spacer.component'
@@ -14,7 +18,7 @@ import './challenge_card.component.scss'
 
 const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
     return (
-        <div id={`#{challenge.title}`} className={
+        <div className={
             clsx({
                 "challenge_card": true,
                 "challenge_card___not_alt": !isAlt,
@@ -49,20 +53,27 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                     <h3>
                         { challenge.title }
                     </h3>
-
                     <VSpacerComponent space={1} />
-
+                    
                     <p>
                         { challenge.text1 }
                     </p>
-                    
                     <VSpacerComponent space={1} />
 
-                    <p>
-                        { challenge.text2 }
-                    </p>
-
-                    <VSpacerComponent space={4} />
+                    {/* highlights */}
+                    {
+                        challenge.highlights.map((highlight)=> {
+                            return (
+                                <ListItem div style={{ paddingLeft: '0' }}>
+                                    <ListItemIcon>
+                                        <InfoIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary={highlight} />
+                                </ListItem>
+                            )
+                        })
+                    }
+                    <VSpacerComponent space={1} />
 
                     <h4>
                         Made For
@@ -81,9 +92,7 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                             })
                         }
                     </div>
-                    
-
-                    <VSpacerComponent space={4} />
+                    <VSpacerComponent space={2} />
 
                     {/*  */}
                     <div className={
@@ -92,6 +101,24 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                             "challenge_card__content__cta_alt": isAlt,
                         })
                     }>
+                        <LinkButtonComponent
+                            to={`/inquire?solution=${challenge.title}`}
+                            text={challenge.helpText}
+                            endIcon={
+                                <ArrowForwardIosIcon
+                                    style={{
+                                        fontSize: '.8rem',
+                                    }}
+                                />
+                            }
+                            isSecondary={false}
+                            styles={{
+                                minWidth: '120px',
+                                maxWidth: '200px',
+                                marginRight: '40px',
+                                marginBottom: '16px',
+                            }}
+                        />
                         <LinkButtonComponent
                             to={`/apply?type=${challenge.title}`}
                             text="Apply"
@@ -105,6 +132,7 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                             isSecondary={true}
                             styles={{
                                 minWidth: '120px',
+                                maxWidth: '132px'
                             }}
                         />
                     </div>
