@@ -62,15 +62,15 @@ const AppBarDesktopComponent = () => {
               </Link>
 
               {/* Challenges */}
-              <Link to='/challenges' className={
+              <Link to='/solutions' className={
                 clsx({
                   "app_link": true,
                   "app_bar__link": true,
-                  "app_bar__link__active": location.pathname === "/challenges"
+                  "app_bar__link__active": location.pathname === "/solutions"
                 })
               }>
                 <p className="">
-                  Challenges
+                  Solutions
                 </p>
               </Link>
 
