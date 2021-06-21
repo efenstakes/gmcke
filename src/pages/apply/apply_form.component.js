@@ -22,7 +22,7 @@ import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
 
 const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
     const initial = {
-        solutions: 'Performance and Learning',
+        solution: 'Performance and Learning',
         name: '',
         email: '',
         company_or_individual: 'INDIVIDUAL',
@@ -150,13 +150,13 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
                             key={index}
                             solution={solution}
                             isSelected={
-                                formData.solution === solution.value
+                                formData.solution === solution.title
                             }
                             onClick={
                                 ()=> setFormValue({
                                     target: {
-                                        name: 'solutions',
-                                        value: solution.value,
+                                        name: 'solution',
+                                        value: solution.title,
                                     }
                                 })
                             }
@@ -279,9 +279,9 @@ const ServiceChoice = ({ solution, isSelected, onClick, }) => {
     const [isOpen, setIsOpen] = useState(false)
 
     if ( isOpen ) {
-        console.log('solutions ', solution.text,' open')
+        console.log('solutions ', solution.title,' open')
     } else {
-        console.log('solutions ', solution.text,' closed')
+        console.log('solutions ', solution.title,' closed')
     }
     return (
         <>
@@ -296,7 +296,7 @@ const ServiceChoice = ({ solution, isSelected, onClick, }) => {
             onClick={onClick}
         >
             <p>
-                { solution.text }
+                { solution.title }
             </p>
             <p className={
                 clsx([
@@ -327,9 +327,6 @@ const ServiceChoice = ({ solution, isSelected, onClick, }) => {
                 {solution.text1}
             </p>
             <VSpacerComponent space={.5}/>
-            <p>
-                {solution.text2}
-            </p>
         </div>
         </>
     )
