@@ -107,7 +107,7 @@ const FooterComponent = () => {
         <VSpacerComponent space={3} />
 
         <div className="footer_copyright">
-            <h4> GMC Kenya </h4>
+            <h4> GMC </h4>
             <p className="footer_copyright__copy"> 
                 &nbsp; Copyright {new Date().getFullYear()} 
             </p> 

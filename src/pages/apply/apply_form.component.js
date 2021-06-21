@@ -148,7 +148,7 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
                     return (
                         <ServiceChoice
                             key={index}
-                            solutions={solution}
+                            solution={solution}
                             isSelected={
                                 formData.solution === solution.value
                             }
