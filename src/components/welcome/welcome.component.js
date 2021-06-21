@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
     Grid
@@ -13,7 +14,7 @@ import img_1 from '../../assets/images/1.png'
 import './welcome.component.scss'
 
 
-const WelcomeComponent = () => {
+const WelcomeComponent = ({ slug1, slug2, text }) => {
     return (
         <div className="welcome_section section">
 
@@ -30,16 +31,20 @@ const WelcomeComponent = () => {
                 <div className="welcome_section__content">
                 
                     <h3>
-                        Reimagine
+                        { slug1 ?? 'Reimagine' }
                     </h3>
                     {/* <VSpacerComponent space={.5} /> */}
                     <h1 className="welcome_section__content__title">
-                        Growth & Balance
+                        { slug2 ?? 'Growth & Balance' }
                     </h1>
                     <VSpacerComponent space={1} />
                     <p className="welcome_section__content__text">
-                        Walking with doers and dreamers to help accelerate 
-                        growth and overcome fear of failure.
+                        { 
+                            text 
+                            ??
+                            `Walking with doers and dreamers to help accelerate 
+                        growth and overcome fear of failure.`
+                    }
                     </p>
                     <VSpacerComponent space={3} />
 
@@ -69,5 +74,9 @@ const WelcomeComponent = () => {
         </div>
     )
 }
-
+WelcomeComponent.propTypes = { 
+    slug1: PropTypes.string, 
+    slug2: PropTypes.string, 
+    text: PropTypes.string
+}
 export default WelcomeComponent
