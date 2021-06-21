@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 import ChallengeCardComponent from '../../components/challenge_card/challenge_card.component'
 import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
@@ -17,49 +17,49 @@ import './challenges.page.scss'
 const ChallengesComponent = () => {
     const challenges = [
         {
-            title: 'Challenge One',
+            title: 'Performance and Learning',
             text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            highlights: [
+                'Team & individual Clarity4D personality profiling',
+                'Team and individual 360 feedback',
+                'Team dynamics performance report',
+                'Conversation, synergizing and goals setting',
+            ],
+            helpText: 'Talk to an Expert',
             made_for: [
                 'Business', 'Individuals'
             ],
             imageUrl: img_5,
         },
         {
-            title: 'Challenge Two',
+            title: 'Coaching',
             text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            highlights: [
+                'Executive Coaching',
+                'ScanCoaching',
+                'Family or organizational system therapy',
+                'Individual and team coaching'
+            ],
+            helpText: 'Engage with a coach',
             made_for: [
                 'Business', 'Individuals'
             ],
             imageUrl: img_1,
         },
         {
-            title: 'Challenge Three',
+            title: 'Business advisory',
             text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
+            highlights: [
+                'Value and character based leadership',
+                'Clear communication in color',
+                'Process & performance innovation',
+                'Change management with purpose',
+            ],
+            helpText: 'Ask a Question',
             made_for: [
                 'Business', 'Individuals'
             ],
             imageUrl: img_2,
-        },
-        {
-            title: 'Challenge Four',
-            text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            made_for: [
-                'Business', 'Individuals'
-            ],
-            imageUrl: img_3,
-        },
-        {
-            title: 'Challenge Five',
-            text1: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            text2: 'Let Great Minds Kenya help you transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            made_for: [
-                'Business', 'Individuals'
-            ],
-            imageUrl: img_4,
         },
     ]
 
@@ -75,11 +75,12 @@ const ChallengesComponent = () => {
                 challenges.map((challenge, index)=> {
 
                     return (
-                        <ChallengeCardComponent
-                            key={index}
-                            challenge={challenge}
-                            isAlt={ (index%2) === 1 }
-                        />
+                        <Link to={`#${challenge.title}`} key={index} className="challenge_card_link">
+                            <ChallengeCardComponent
+                                challenge={challenge}
+                                isAlt={ (index%2) === 1 }
+                            />
+                        </Link>
                     )
                 })
             }

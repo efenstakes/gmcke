@@ -22,7 +22,11 @@ const ChallengesPage = () => {
 
 
             {/* welcome section */}
-            <WelcomeComponent />
+            <WelcomeComponent 
+                slug1='When life or business'
+                slug2='Throws you a Curveball'
+                text='We recreate every step of the journey with you'
+            />
             <VSpacerComponent space={6} />
 
 
