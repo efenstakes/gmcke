@@ -14,7 +14,7 @@ import LinkButtonComponent from '../../components/buttons/link_button.component'
 import TextInputComponent from '../../components/inputs/text_input.component'
 import ButtonComponent from '../../components/buttons/button.component'
 
-import img_1 from '../../assets/images/1.png'
+import img_1 from '../../assets/images/Extra B-01.png'
 
 import './woo.component.scss'
 

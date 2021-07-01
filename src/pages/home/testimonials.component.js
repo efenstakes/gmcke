@@ -28,9 +28,14 @@ const TestimonialsComponent = () => {
             who_title: 'Philips Helath Innovation Lead'       
         },
         {
-            text: 'transform your business. Create more talent, innovation and profits. Lets build your family. Let Great Minds Kenya help you.',
-            who: 'John Peter', 
-            who_title: 'CEO'       
+            text: 'GreatMinds infuses international cutting edge techniques within the local context to bring powerful change to individuals and organizations.',
+            who: 'Prof. Scott Bellows', 
+            who_title: 'USIU'       
+        },
+        {
+            text: 'GreatMinds has a creative approach to coaching, learning & performance that brings synergy & transformation to teams and organizations.',
+            who: 'Arthur Dieffenthaler',
+            who_title: 'GM Airfrance-KLM Eastern Africa',
         },
     ]
     
@@ -38,7 +43,7 @@ const TestimonialsComponent = () => {
         <div className="section testimonials_section">
             
             <h3 className="section_title section_title_white">
-                TESTIMONIALS
+                OUR EXPERIENCE WORKING WITH GREATMINDS
             </h3>
             <VSpacerComponent space={4} />
 

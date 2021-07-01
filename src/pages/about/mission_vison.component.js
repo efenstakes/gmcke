@@ -4,7 +4,8 @@ import { Grid } from '@material-ui/core'
 
 import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
 
-import img_1 from '../../assets/images/1.png'
+// import img_1 from '../../assets/images/1.png'
+import img_1 from '../../assets/images/Vision & Mission Illustration-01.png'
 
 
 import './about.page.scss'

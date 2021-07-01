@@ -11,7 +11,7 @@ import InquireFormComponent from './inquire_form.component'
 
 
 
-import img_1 from '../../assets/images/1.png'
+import img_1 from '../../assets/images/Perfomance & Learning-01.png'
 
 import './inquire.page.scss'
 

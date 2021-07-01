@@ -5,9 +5,9 @@ import ServiceCardComponent from '../../components/service_card/service_card.com
 import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
 
 // images
-import img_1 from '../../assets/images/1.png'
-import img_2 from '../../assets/images/2.png'
-import img_3 from '../../assets/images/3.png'
+import img_1 from '../../assets/images/Perfomance & Learning-01.png'
+import img_2 from '../../assets/images/Coaching in a nice chill way-01.png'
+import img_3 from '../../assets/images/Advisory-01.png'
 
 const ServicesComponent = () => {
     const service_list = [

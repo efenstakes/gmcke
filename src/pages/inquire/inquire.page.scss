@@ -5,13 +5,17 @@
     // width: 240px;
     max-width: 100%;
     width: 100%;
-    height: 200px;
+    height: 220px;
 
     position: relative;
 
     // background-color: yellow;
 
     align-self: center;
+
+    @media screen and (min-width: 720px) {
+        height: 280px;
+    }
 }
 .apply__image_wrapper__image {
     object-fit: contain;
