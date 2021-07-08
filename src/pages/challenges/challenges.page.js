@@ -31,8 +31,8 @@ const ChallengesPage = () => {
 
 
             {/* suggestion prompt */}
-            <SuggestComponent />
-            <VSpacerComponent space={6} />
+            {/* <SuggestComponent />
+            <VSpacerComponent space={6} /> */}
 
 
             {/* challenges */}
