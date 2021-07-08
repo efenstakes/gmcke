@@ -20,14 +20,25 @@ import img_1 from '../../assets/images/p1.jpg'
 import img_2 from '../../assets/images/p2.jpg'
 import img_3 from '../../assets/images/p3.jpg'
 
-import i1 from '../../assets/inspiration/another.jpg'
-import i2 from '../../assets/inspiration/jane ngige.jpg'
-import i3 from '../../assets/inspiration/ruthie rono.jpg'
-import i4 from '../../assets/inspiration/vimal shah.jpg'
-import i5 from '../../assets/inspiration/wahu kagwi.jpg'
+// import i1 from '../../assets/inspiration/another.jpg'
+// import i2 from '../../assets/inspiration/jane ngige.jpg'
+// import i3 from '../../assets/inspiration/ruthie rono.jpg'
+// import i4 from '../../assets/inspiration/vimal shah.jpg'
+// import i5 from '../../assets/inspiration/wahu kagwi.jpg'
 
-import c1 from '../../assets/coaches/decimar ogutu.jpg'
-import c2 from '../../assets/coaches/susan wamae.jpg'
+// import c1 from '../../assets/coaches/decimar ogutu.jpg'
+// import c2 from '../../assets/coaches/susan wamae.jpg'
+
+import i1 from '../../assets/images/eddine.jpeg'
+import i2 from '../../assets/images/jane.jpeg'
+import i3 from '../../assets/images/ruthie.jpeg'
+import i4 from '../../assets/images/vimal.jpeg'
+import i5 from '../../assets/images/wahu.jpeg'
+
+import c1 from '../../assets/images/daisy.jpeg'
+import c2 from '../../assets/images/susan.jpeg'
+import c3 from '../../assets/images/mary.jpeg'
+import c4 from '../../assets/images/salma.jpeg'
 
 
 import './about.page.scss'
@@ -35,7 +46,7 @@ import './about.page.scss'
 
 const AboutPage = () => {
     const avatars = [
-        c1, c2,
+        c1, c2, c3, c4,
     ]
     const inspiration = [
         i1, i2, i3, i4, i5
@@ -50,7 +61,11 @@ const AboutPage = () => {
 
 
             {/* welcome section */}
-            <WelcomeComponent />
+            <WelcomeComponent 
+                slug1="We are a community"
+                slug2="Inspiring Africa to new frontiers"
+                text="We are conscious rebels with a cause for change, and our transformation story begins with you today."
+            />
             <VSpacerComponent space={6} />
 
             {/* our story */}
