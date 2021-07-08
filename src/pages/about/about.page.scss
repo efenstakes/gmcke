@@ -17,8 +17,13 @@
     
     @media screen and (min-width: 720px) {
         padding: 0 20px 0 40px;
-        width: 360px;
-        height: 360px;
+        width: 480px;
+        height: 480px;
+    }   
+    @media screen and (min-width: 1000px) {
+        padding: 0 20px 0 40px;
+        width: 520px;
+        height: 520px;
     }
 }
 
@@ -114,4 +119,11 @@
 
 .our_members_section__content__title {
     color: $primary_color;
+}
+
+
+
+.about_section__content__values {
+    // display: flex;
+
 }

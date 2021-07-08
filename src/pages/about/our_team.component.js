@@ -9,8 +9,9 @@ import MemberCardComponent from '../../components/member_card/member_card.compon
 
 //
 import img_1 from '../../assets/images/1.png'
-import hilda from '../../assets/images/hilda.jpg'
-import charles from '../../assets/images/charles.jpg'
+import hilda from '../../assets/images/hilda.jpeg'
+import charles from '../../assets/images/charles.jpeg'
+import peter from '../../assets/images/peter.jpeg'
 import peter_2 from '../../assets/images/peter_2.jpg'
 
 import './about.page.scss'
@@ -21,7 +22,7 @@ const OurTeamComponent = () => {
             name: 'Peter Ndungu',
             title: 'CEO',
             quote: 'Im Peter Ndungu and this is my quote and its good',
-            imageUrl: img_1
+            imageUrl: peter
         },
         {
             name: 'Peter Kinyanjui',
