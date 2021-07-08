@@ -9,12 +9,12 @@ import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
 const InActionComponent = () => {
     const videos = [
         {
-            title: '2020 Aug Challenge',
-            url: 'K8pyNXNtZBM'
+            title: 'GreatMinds Challenge Workshop Nairobi',
+            url: 'KdvbbBcc-ZU'
         },
         {
-            title: '2021 May Challenge',
-            url: 'DZRRfMHxdAw'
+            title: 'GreatMinds Challenge 2019',
+            url: 'HGwY9BwChwY&t=21s'
         },
         {
             title: '2021 Feb Challenge',
