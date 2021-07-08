@@ -38,6 +38,17 @@ const MissionVisonComponent = () => {
                     <p>
                         Become the epicenter of significance in Africa. 
                     </p>
+                    <VSpacerComponent space={3} />
+
+                    <h3> Values </h3>
+                    <VSpacerComponent space={1} />
+
+                    <div className="about_section__content__values">
+                        <p> Courage </p>
+                        <p> Authenticity </p>
+                        <p> Freedom </p>
+                    </div>
+
 
                 </div>
             </Grid>
