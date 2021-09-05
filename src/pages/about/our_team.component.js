@@ -12,7 +12,7 @@ import img_1 from '../../assets/images/1.png'
 import hilda from '../../assets/images/hilda.jpeg'
 import charles from '../../assets/images/charles.jpeg'
 import peter from '../../assets/images/peter.jpeg'
-import peter_2 from '../../assets/images/peter_2.jpg'
+import susan from '../../assets/images/susan.jpeg'
 
 import './about.page.scss'
 
@@ -21,19 +21,19 @@ const OurTeamComponent = () => {
         {
             name: 'Peter Ndungu',
             title: 'CEO',
-            quote: 'Im Peter Ndungu and this is my quote and its good',
+            quote: ' Working with people is revealing the very essence of miracles in nature,& we do that everyday together with our partners',
             imageUrl: peter
         },
         {
-            name: 'Peter Kinyanjui',
+            name: 'Susan Wamae',
             title: 'CEO',
-            quote: 'The powerful journey of connection, self-discovery and purpose is a narrow road not walked by many; I have however came to realise and appreciate that it is a never-ending journey that requires  family and in the long run a community of believers.',
-            imageUrl: peter_2
+            quote: 'Engaging, inspiring & coaching a new generation of leaders & innovators  Africa for solutions acceleration.',
+            imageUrl: susan
         },
         {
             name: 'Kiago Hilda',
             title: 'CEO',
-            quote: 'Im Hilda and this is my quote and its good',
+            quote: 'I believe that everyone has it in them the ability to actualize their potential. It is not enough to merely dream, we must accomplish. As a psychologist and marketer, my passion is to enable people to realize their potential and accomplish it across all areas of their life. We are all powerful beyond measure.',
             imageUrl: hilda
         },
         {
