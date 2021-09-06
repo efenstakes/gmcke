@@ -45,11 +45,20 @@ import './about.page.scss'
 
 
 const AboutPage = () => {
-    const avatars = [
-        c1, c2, c3, c4,
+    
+    const avatar_list = [
+        { name: 'Daisy Ogutu', avatar: c1 },
+        { name: 'Susan Wamae', avatar: c2 },
+        { name: 'Mary Murigah', avatar: c3 },
+        { name: 'Salma Mazrui Watt', avatar: c4 },
     ]
-    const inspiration = [
-        i1, i2, i3, i4, i5
+    
+    const inspiration_list = [
+        { name: 'Dr. Bahaa Eddine', avatar: i1 },
+        { name: 'Jane Ngugi', avatar: i2 },
+        { name: 'Prof. Ruthie Rono', avatar: i3 },
+        { name: 'Vimal Shah', avatar: i4 },
+        { name: 'Wahu Kagwi', avatar: i5 },
     ]
 
 
@@ -91,7 +100,7 @@ const AboutPage = () => {
             {/* board of inspiration */}
             <OurMembersComponent 
                 title="Board Of Inspiration"
-                avatars={inspiration}
+                avatars={inspiration_list}
                 sectionImageUrl={img_11}
             />
             <VSpacerComponent space={6} />
@@ -100,7 +109,7 @@ const AboutPage = () => {
             {/* coaches and experts */}
             <OurMembersComponent 
                 title="Our Coaches and Experts"
-                avatars={avatars}
+                avatars={avatar_list}
                 sectionImageUrl={img_12}
             />
             <VSpacerComponent space={6} />

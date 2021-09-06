@@ -28,11 +28,19 @@ const OurMembersComponent = ({ title, avatars, sectionImageUrl }) => {
                             {
                                 avatars.map((avt, index)=> {
                                     return (
-                                        <img 
-                                            key={index}
-                                            src={avt}
-                                            className="our_members_section__content__avatars__avatar"
-                                        />
+                                        <div className="our_members_section__content__avatar_box">
+                                            <img 
+                                                key={index}
+                                                src={avt.avatar}
+                                                className="our_members_section__content__avatars__avatar"
+                                            />
+                                            <p style={{
+                                                fontSize: '.8rem',
+                                                marginTop: '5px',
+                                            }}> 
+                                                {avt.name} 
+                                            </p>
+                                        </div>
                                     )
                                 })
                             }
