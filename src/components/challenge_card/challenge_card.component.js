@@ -66,7 +66,7 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                             return (
                                 <ListItem div style={{ paddingLeft: '0' }}>
                                     <ListItemIcon>
-                                        <InfoIcon />
+                                        <ArrowForwardIosIcon />
                                     </ListItemIcon>
                                     <ListItemText primary={highlight} />
                                 </ListItem>
@@ -119,7 +119,7 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                                 marginBottom: '16px',
                             }}
                         />
-                        <LinkButtonComponent
+                        {/* <LinkButtonComponent
                             to={`/apply?type=${challenge.title}`}
                             text="Talk to a human"
                             endIcon={
@@ -134,7 +134,7 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                                 minWidth: '120px',
                                 maxWidth: '132px'
                             }}
-                        />
+                        /> */}
                     </div>
 
                 </div>

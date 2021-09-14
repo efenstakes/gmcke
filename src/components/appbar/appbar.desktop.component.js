@@ -93,7 +93,7 @@ const AppBarDesktopComponent = () => {
             {/* cta button */}
             <LinkButtonComponent
               to="/apply"
-              text="Apply Now"
+              text="Talk To a Human"
               isSecondary={true}
             />
 
