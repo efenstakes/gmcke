@@ -29,8 +29,8 @@ const WhyUsComponent = () => {
                             We are continuously and consciously 
                             providing an enriching safe space, for 
                             self-mastery, conscious living and 
-                            healing to achieve greatness commencing 
-                            with the largest population in Africa. 
+                            skill development, coaching and business
+                            development. 
                         </p>
                         {/* <VSpacerComponent space={2} />
                         <p>
