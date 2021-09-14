@@ -21,29 +21,25 @@ const OurStoryComponent = () => {
                         <VSpacerComponent space={1} />
 
                         <p>
-                            We believe that nurturing talents with 
-                            integrity, new mindsets, values and 
-                            character is key to attaining strategy 
-                            and purpose of individuals or 
-                            organizations and nations at large. We 
-                            also believe that investing in talents 
-                            through cutting edge tools is in line 
-                            with any future-proof organization’s 
-                            purpose to be driven by People, Planet 
-                            and Prosperity. 
+                            We P-squared, (Peter Kinyanjui and Peter Ndungu) started Great Minds to run 
+                            away and find space to recreate our dreams. Our biggest realization was that creating
+                            a fun, unconventional space, where we could remember who we are, and reconnect to our truest selves 
+                            was going to be an uphill task. Over the years, many more other individuals and organizations
+                            have plugged into our little space, as they chase their vision, aspirations and prosperity.
                         </p>
-                        {/* <VSpacerComponent space={2} />
+                        <VSpacerComponent space={2} />
                         <p>
-                            Donec tincidunt euismod fringilla. 
-                            Phasellus eu vehicula nulla, vulputate 
-                            dapibus felis. Sed ut purus in turpis 
-                            aliquam porta ac eu eros. Vestibulum 
-                            mattis eu orci ac euismod. Cras ut orci 
-                            elit. In suscipit euismod ex vel 
-                            sollicitudin. Maecenas efficitur ex 
-                            aliquet, tincidunt neque sed, blandit 
-                            urna.
-                        </p> */}
+                            Through this journey we have created fun ways of unlearning without
+                            fear of failure. We have worked with people to redefine success, 
+                            challenge their world views and continously grow leaders who think
+                            without the box, and walk the untested path to leave footprints for others to 
+                            explorenew frontiers. It's a journey we walk everyday with awesome 
+                            network of friends, creatives, experts,, coaches and partners from around 
+                            the world. Sometimes we fail and get emotional then we rise back, up 
+                            smile at our new learning, and discover something new. As we dream bigger,
+                            to have more new generation of leaders on board, we invitte you to 
+                            come and co-create with us to help you reimagine everything.
+                        </p>
 
                     </div>
                 </Grid>
