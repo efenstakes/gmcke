@@ -14,17 +14,17 @@ const ServicesComponent = () => {
         {
             imageUrl: img_1,
             title: 'Performance and Learning',
-            text: 'Continuous improvement- Kaizen is the hallmark of all successful teams and individuals. We provide custom-made performance and learning services across all industries to enhance efficiency, leadership and innovation.'
+            text: 'Kaizen is the hallmark of all successful teams and individuals. We provide custom-made learning and skills development services across all industries to enhance efficiency, leadership and innovation.'
         },
         {
             imageUrl: img_2,
             title: 'Coaching',
-            text: 'Stand in your authentic power. We work with individuals and teams to break through self-limiting beliefs, gain clarity, strengthen relationships and amplify self-mastery through Neuro-Linguistic Programming (NLP) or ScanCoaching methodology.'
+            text: 'We work with individuals and teams to break through self-limiting beliefs, align behavior with goals, strengthen relationships and amplify self-mastery through Neuro-Linguistic Programming (NLP) or ScanCoaching methodology.'
         },
         {
             imageUrl: img_3,
             title: 'Advisory',
-            text: 'Accelerate growth & efficiency. The way to maximizing organizational performance and potential is through leadership, communication and effective processes. We challenge you to discover fresh perspectives, equip you with the HOW so that you or your organization can swing into action.  '
+            text: 'The way to maximizing organizational performance and potential is through leadership, communication and effective processes. We challenge you to discover fresh perspectives and equip you with the HOW so that you or your organization can accelerate growth and efficiency.'
         }
     ]
 
