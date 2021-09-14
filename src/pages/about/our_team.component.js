@@ -20,13 +20,13 @@ const OurTeamComponent = () => {
     const members = [
         {
             name: 'Peter Ndungu',
-            title: 'CEO',
+            title: 'Co-founder and Visionary',
             quote: ' Working with people is revealing the very essence of miracles in nature,& we do that everyday together with our partners',
             imageUrl: peter
         },
         {
             name: 'Susan Wamae',
-            title: 'CEO',
+            title: 'Lead Coach',
             quote: 'Engaging, inspiring & coaching a new generation of leaders & innovators  Africa for solutions acceleration.',
             imageUrl: susan
         },
@@ -39,7 +39,7 @@ const OurTeamComponent = () => {
         },
         {
             name: 'Kaunda Charles',
-            title: 'CEO',
+            title: 'Finance and Business Development',
             quote: 'How we work with our clients is nothing short of poetic, but what our clients create & provide for society, well that’s poetry in motion!',
             imageUrl: charles
         },
