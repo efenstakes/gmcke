@@ -20,23 +20,26 @@ import './challenges.page.scss'
 const ChallengesComponent = () => {
     const challenges = [
         {
-            title: 'Performance and Learning',
-            text1: 'Achieve high performance by design through up/reskilling, behavior & culture transformation, to help you accelerate growth and fear of failure.',
+            title: 'Kaizen Performance and Learning',
+            text1: 'Achieve high performance by design through up/reskilling, behavior & culture transformation, to help you accelerate growth and accelerate growth.',
             highlights: [
                 'Unlocking personal & team potential through Clarity4D scientific behavioral profiling tool.',
-                'Feedback is gold, we facilitate for 360 feedbacks with employees, or customers using a colorful fun & simple tested & proven method',
-                'Is your return on invest & character of your team an areas of need? Using team dynamics report, to accelerate performance, we are able to pin point the root cause of ineffectiveness and provide long term sustainable solutions.',
-                'Online/in person team vitality & engagement programs',
+                'We facilitate for 360 feedbacks with employees, clients and management using colorful, fun and proven methods',
+                // 'Is your return on invest & character of your team an areas of need? Using team dynamics report, to accelerate performance, we are able to pin point the root cause of ineffectiveness and provide long term sustainable solutions.',
+                'Using team dynamics reports we are able to pin point the root cause of the problem and provide a long term sustainable solution',
+                // 'Online/in person team vitality & engagement programs',
+                'We offer cutting edge virtual and/or in person vitality & engagement programs',
             ],
             helpText: 'Talk to an Expert',
             made_for: [
-                'Business', 'Individuals'
+                'Corporates', 'SME\'s'
             ],
             imageUrl: img_4,
         },
         {
             title: 'Coaching',
-            text1: 'As establish yourself & take action towards your professional and life vision and goals, we prove a safe platform with some of the best coaches in the market that will help you get to the root cause using technology & others tools to unlock potential, find fulfilment and live a life of purpose.',
+            // text1: 'As establish yourself & take action towards your professional and life vision and goals, we prove a safe platform with some of the best coaches in the market that will help you get to the root cause using technology & others tools to unlock potential, find fulfilment and live a life of purpose.',
+            text1: 'We provide a safe platform with industry leading coaches who will help you get to the root cause of what is folding you back using technology and other tools to unlock your potential, find fulfillment and live a life of purpose',
             highlights: [
                 'Executive Coaching',
                 'ScanCoaching',
@@ -45,7 +48,7 @@ const ChallengesComponent = () => {
             ],
             helpText: 'Engage with a coach',
             made_for: [
-                'Business', 'Individuals'
+                'Corporates', 'Individuals', 'SME\'s',
             ],
             imageUrl: img_1,
         },
@@ -60,7 +63,7 @@ const ChallengesComponent = () => {
             ],
             helpText: 'Ask a Question',
             made_for: [
-                'Business', 'Individuals'
+                'Corporates', 'Individuals', 'SME\'s',
             ],
             imageUrl: img_2,
         },

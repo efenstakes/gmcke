@@ -33,7 +33,8 @@ const OurTeamComponent = () => {
         {
             name: 'Kiago Hilda',
             title: 'CEO',
-            quote: 'I believe that everyone has it in them the ability to actualize their potential. It is not enough to merely dream, we must accomplish. As a psychologist and marketer, my passion is to enable people to realize their potential and accomplish it across all areas of their life. We are all powerful beyond measure.',
+            // quote: 'I believe that everyone has it in them the ability to actualize their potential. It is not enough to merely dream, we must accomplish. As a psychologist and marketer, my passion is to enable people to realize their potential and accomplish it across all areas of their life. We are all powerful beyond measure.',
+            quote: 'I believe that everyone has it in them the ability to actualize their potential. It is not enough to merely dream, we must accomplish. My passion is to enable people to realize their potential and accomplish it across all areas of their life. We are all powerful beyond measure.',
             imageUrl: hilda
         },
         {

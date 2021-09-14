@@ -14,7 +14,7 @@ import img_1 from '../../assets/images/1.png'
 import './welcome.component.scss'
 
 
-const WelcomeComponent = ({ slug1, slug2, text }) => {
+const WelcomeComponent = ({ slug1, slug2, text, showCtas=true }) => {
     return (
         <div className="welcome_section section">
 
@@ -47,25 +47,29 @@ const WelcomeComponent = ({ slug1, slug2, text }) => {
                     }
                     </p>
                     <VSpacerComponent space={3} />
+                    
+                    {
+                        showCtas &&
+                            <div className="welcome_section__content__ctas">
+                                {/* <LinkButtonComponent
+                                    to="/apply"
+                                    text="Apply Now"
+                                    styles={{
+                                        minWidth: '160px'
+                                    }}
+                                    isSecondary={true}
+                                /> */}
 
-                    <div className="welcome_section__content__ctas">
-                        <LinkButtonComponent
-                            to="/apply"
-                            text="Apply Now"
-                            styles={{
-                                minWidth: '160px'
-                            }}
-                            isSecondary={true}
-                        />
-
-                        <LinkButtonComponent
-                            to="/apply"
-                            text="Learn More"
-                            styles={{
-                                minWidth: '160px'
-                            }}
-                        />
-                    </div>
+                                <LinkButtonComponent
+                                    to="/apply"
+                                    text="Learn More"
+                                    styles={{
+                                        minWidth: '160px'
+                                    }}
+                                />
+                            </div>
+                    }
+                    
                     
                 </div>
                 </Grid>
@@ -77,6 +81,7 @@ const WelcomeComponent = ({ slug1, slug2, text }) => {
 WelcomeComponent.propTypes = { 
     slug1: PropTypes.string, 
     slug2: PropTypes.string, 
-    text: PropTypes.string
+    text: PropTypes.string,
+    showCtas: PropTypes.bool,
 }
 export default WelcomeComponent

@@ -121,7 +121,7 @@ const ChallengeCardComponent = ({ challenge, isAlt=false }) => {
                         />
                         <LinkButtonComponent
                             to={`/apply?type=${challenge.title}`}
-                            text="Apply"
+                            text="Talk to a human"
                             endIcon={
                                 <ArrowForwardIosIcon
                                     style={{
