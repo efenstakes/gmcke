@@ -7,8 +7,8 @@ import { AppBar, Toolbar } from '@material-ui/core'
 
 import LinkButtonComponent from '../buttons/link_button.component'
 
-// import logo from '../../assets/images/logogmc.jpg'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/images/logogmc.jpg'
+// import logo from '../../assets/logo.svg'
 
 import './appbar.component.scss'
 

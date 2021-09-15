@@ -10,8 +10,8 @@ import {
 import LinkButtonComponent from '../buttons/link_button.component'
 
 
-// import logo from '../../assets/images/logogmc.jpg'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/images/logogmc.jpg'
+// import logo from '../../assets/logo.svg'
 
 import './appbar.component.scss'
 
