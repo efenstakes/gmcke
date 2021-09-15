@@ -88,15 +88,15 @@ const FooterComponent = () => {
                     <h4> Connect Online </h4>
                     <VSpacerComponent space={1} />
 
-                    <Link to="https://twitter.com/GMCNairobi" strict={true} target="_blank" className="app_link footer__contact_links__link">
+                    <Link to={{ pathname: "https://twitter.com/GMCNairobi" }} target="_blank" className="app_link footer__contact_links__link">
                         <TwitterIcon />
                     </Link>
                     
-                    <Link to="https://www.linkedin.com/school/greatmindsnairobi" target="_blank" className="app_link footer__contact_links__link">
+                    <Link to={{ pathname: "https://www.linkedin.com/school/greatmindsnairobi" }} target="_blank" className="app_link footer__contact_links__link">
                         <LinkedInIcon />
                     </Link>
                     
-                    <Link to="https://www.instagram.com/greatmindschallenge" target="_blank" className="app_link footer__contact_links__link">
+                    <Link to={{ pathname: "https://www.instagram.com/greatmindschallenge" }} target="_blank" className="app_link footer__contact_links__link">
                         <InstagramIcon />
                     </Link>
 

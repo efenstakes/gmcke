@@ -9,11 +9,11 @@ import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
 const InActionComponent = () => {
     const videos = [
         {
-            title: 'GreatMinds Challenge Workshop Nairobi',
+            title: 'GreatMinds Challenge (Diani)',
             url: '3t6mtASVTwo'
         },
         {
-            title: 'GreatMinds Challenge 2019',
+            title: 'GreatMinds Challenge',
             url: '85U9iaXEyCQ'
         },
         {
