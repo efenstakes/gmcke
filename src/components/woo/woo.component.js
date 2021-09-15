@@ -117,7 +117,7 @@ const WooComponent = () => {
                     <VSpacerComponent space={2} />
                     <LinkButtonComponent
                         to="/apply"
-                        text="Talk to a human"
+                        text="Talk to a expert"
                         styles={{
                             maxWidth: '200px'
                         }}

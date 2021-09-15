@@ -20,8 +20,8 @@ import './challenges.page.scss'
 const ChallengesComponent = () => {
     const challenges = [
         {
-            title: 'Kaizen Performance and Learning',
-            text1: 'Achieve high performance by design through up/reskilling, behavior & culture transformation, to help you accelerate growth and accelerate growth.',
+            title: 'Performance and Learning',
+            text1: 'Achieve high performance by design through up/reskilling, behavior & culture transformation, to help you accelerate growth.',
             highlights: [
                 'Unlocking personal & team potential through Clarity4D scientific behavioral profiling tool.',
                 'We facilitate for 360 feedbacks with employees, clients and management using colorful, fun and proven methods',
@@ -32,14 +32,14 @@ const ChallengesComponent = () => {
             ],
             helpText: 'Talk to an Expert',
             made_for: [
-                'Corporates', 'SME\'s'
+                'Corporates', 'Individuals', 'SME\'s'
             ],
             imageUrl: img_4,
         },
         {
             title: 'Coaching',
             // text1: 'As establish yourself & take action towards your professional and life vision and goals, we prove a safe platform with some of the best coaches in the market that will help you get to the root cause using technology & others tools to unlock potential, find fulfilment and live a life of purpose.',
-            text1: 'We provide a safe platform with industry leading coaches who will help you get to the root cause of what is folding you back using technology and other tools to unlock your potential, find fulfillment and live a life of purpose',
+            text1: 'We provide a safe platform with industry leading coaches who will help you get to the root cause of what is holding you back using technology and other tools to unlock your potential, find fulfillment and live a life of purpose',
             highlights: [
                 'Executive Coaching',
                 'ScanCoaching',

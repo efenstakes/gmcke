@@ -10,15 +10,15 @@ const InActionComponent = () => {
     const videos = [
         {
             title: 'GreatMinds Challenge Workshop Nairobi',
-            url: 'KdvbbBcc-ZU'
+            url: '3t6mtASVTwo'
         },
         {
             title: 'GreatMinds Challenge 2019',
-            url: 'HGwY9BwChwY&t=21s'
+            url: '85U9iaXEyCQ'
         },
         {
             title: '2021 Feb Challenge',
-            url: 'UCqCeFlAgKuSdqyRO2LYKtdA', // '_WWEOCQGxSw'
+            url: 'xREGOXEbr2U', // '_WWEOCQGxSw'
         },
     ]
     return (

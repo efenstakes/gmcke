@@ -33,12 +33,12 @@ const OurStoryComponent = () => {
                             fear of failure. We have worked with people to redefine success, 
                             challenge their world views and continously grow leaders who think
                             without the box, and walk the untested path to leave footprints for others to 
-                            explorenew frontiers. It's a journey we walk everyday with awesome 
-                            network of friends, creatives, experts,, coaches and partners from around 
+                            explore new frontiers. It's a journey we walk everyday with awesome 
+                            network of friends, creatives, experts, coaches and partners from around 
                             the world. Sometimes we fail and get emotional then we rise back, up 
                             smile at our new learning, and discover something new. As we dream bigger,
-                            to have more new generation of leaders on board, we invitte you to 
-                            come and co-create with us to help you reimagine everything.
+                            to have more new generation of leaders on board, we invite you to 
+                            come and co-create with us help you reimagine everything.
                         </p>
 
                     </div>
