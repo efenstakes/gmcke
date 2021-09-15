@@ -17,7 +17,7 @@ const InActionComponent = () => {
             url: '85U9iaXEyCQ'
         },
         {
-            title: '2021 Feb Challenge',
+            title: 'Unlocking Personal & Team Potential',
             url: 'xREGOXEbr2U', // '_WWEOCQGxSw'
         },
     ]
