@@ -8,6 +8,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter'
 
 
 import './footer.component.scss'
@@ -34,7 +35,7 @@ const FooterComponent = () => {
                             }}
                         />
                         <p className="footer__contact_links__icon_link__text"> 
-                            +25400884983 
+                            +254 115 619404
                         </p>
                     </div>
                     <VSpacerComponent space={.5} />
@@ -47,7 +48,7 @@ const FooterComponent = () => {
                             }}
                         />
                         <p className="footer__contact_links__icon_link__text"> 
-                            gmc@gmail.com 
+                            info@greatmindsnairobi.co.ke 
                         </p>
                     </div>
 
@@ -87,15 +88,15 @@ const FooterComponent = () => {
                     <h4> Connect Online </h4>
                     <VSpacerComponent space={1} />
 
-                    <Link to="" className="app_link footer__contact_links__link">
-                        <FacebookIcon />
+                    <Link to="https://twitter.com/GMCNairobi" className="app_link footer__contact_links__link">
+                        <TwitterIcon />
                     </Link>
                     
-                    <Link to="" className="app_link footer__contact_links__link">
+                    <Link to="https://www.linkedin.com/school/greatmindsnairobi" className="app_link footer__contact_links__link">
                         <LinkedInIcon />
                     </Link>
                     
-                    <Link to="" className="app_link footer__contact_links__link">
+                    <Link to="https://www.instagram.com/greatmindschallenge" className="app_link footer__contact_links__link">
                         <InstagramIcon />
                     </Link>
 
@@ -107,7 +108,7 @@ const FooterComponent = () => {
         <VSpacerComponent space={3} />
 
         <div className="footer_copyright">
-            <h4> GMC </h4>
+            <h4> Great Minds Kenya </h4>
             <p className="footer_copyright__copy"> 
                 &nbsp; Copyright {new Date().getFullYear()} 
             </p> 
