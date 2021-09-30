@@ -54,6 +54,10 @@ const InquireFormComponent = ({ setIsSuccessful }) => {
             text: "Business advisory",
             value: "Business advisory",
         },
+        {
+            text: "Other Inquiries",
+            value: "Other inquiries",
+        },
     ]
 
     const [formData, setFormData] = useState(initial)
