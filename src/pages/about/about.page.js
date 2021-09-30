@@ -13,8 +13,8 @@ import OurMembersComponent from './our_members.component'
 
 
 
-import img_11 from '../../assets/images/Meditation-01.png'
-import img_12 from '../../assets/images/Perfomance & Learning-01.png'
+import img_11 from '../../assets/images/inspire.jpeg' // '../../assets/images/Meditation-01.png'
+import img_12 from '../../assets/images/coaches.jpeg' // '../../assets/images/Perfomance & Learning-01.png'
 
 import img_1 from '../../assets/images/p1.jpg'
 import img_2 from '../../assets/images/p2.jpg'

@@ -34,7 +34,7 @@ const ChallengesComponent = () => {
             made_for: [
                 'Corporates', 'Individuals', 'SME\'s'
             ],
-            imageUrl: img_4,
+            imageUrl: img_1,
         },
         {
             title: 'Coaching',
@@ -50,7 +50,7 @@ const ChallengesComponent = () => {
             made_for: [
                 'Corporates', 'Individuals', 'SME\'s',
             ],
-            imageUrl: img_1,
+            imageUrl: img_4,
         },
         {
             title: 'Business advisory',
