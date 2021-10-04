@@ -40,7 +40,7 @@ const WooComponent = () => {
 
     const subscribe = async ()=> {
         setErrors(initial)
-        const url = 'https://thawing-plains-83115.herokuapp.com/mail'
+        const url = 'https://thawing-plains-83115.herokuapp.com/subscribe'
 
         setIsLoading(true)
 
@@ -50,7 +50,7 @@ const WooComponent = () => {
             })
             return 
         }        
-        if ( validator.isEmail(formData.email) ) {
+        if ( !validator.isEmail(formData.email) ) {
             setErrors((state)=> {
                 return { ...state, email: 'Email should be valid' }
             })
@@ -75,7 +75,7 @@ const WooComponent = () => {
 
         const response = await request.json() 
         
-        if( !response['sent'] ) {
+        if( !response['send'] ) {
             setIsLoading(false)
             setErrors((state)=> {
                 return {
@@ -90,6 +90,19 @@ const WooComponent = () => {
         setIsSuccessful(true)
     }// subscribe
 
+
+    if( isSuccessful ) {
+        return (
+            <div style={{
+                padding: '40px 0',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}>
+                <p> You have successfully subscribed </p>
+            </div>
+        )
+    }
 
     return (
         <div className="section woo_section">

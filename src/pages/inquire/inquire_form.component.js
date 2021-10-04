@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useParams, useLocation } from 'react-router-dom'
+import validator from 'validator'
 
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
@@ -83,13 +84,45 @@ const InquireFormComponent = ({ setIsSuccessful }) => {
 
     const onSubmit = async ()=> {
         setErrors(initial)
-        const url = 'https://thawing-plains-83115.herokuapp.com/mail'
+        const url = 'https://thawing-plains-83115.herokuapp.com/inquire'
+
+
+        // name
+        if( formData.name.length === 0 ) {
+            setState((state)=> {
+                return { ...state, name: 'Name cannot be empty' }
+            })
+            return 
+        }
+        if( formData.name.length < 5 ) {
+            setState((state)=> {
+                return { ...state, name: 'Name must be atleast 5 characters' }
+            })
+            return 
+        }
+
+        
+        // email
+        if( formData.email.length === 0 ) {
+            setState((state)=> {
+                return { ...state, email: 'Email cannot be empty' }
+            })
+            return 
+        }
+        if( !validator.isEmail(formData.email) ) {
+            setState((state)=> {
+                return { ...state, email: 'Email should be valid' }
+            })
+            return 
+        }
+
+        // 
 
         setIsLoading(true)
         console.log('formData ', formData)
         // return
         const request = await fetch(url, {
-            method: 'post',
+            method: 'POST',
             body: JSON.stringify(formData)
         })
         
