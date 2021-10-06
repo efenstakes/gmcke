@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, useLocation } from 'react-router-dom'
 import validator from 'validator'
 
@@ -79,7 +79,7 @@ const InquireFormComponent = ({ setIsSuccessful }) => {
         const name = target.name
         const file = target.files[0]
 
-        this.setState({ [name]: file })
+        setFormData({ [name]: file })
     }// onFileChange
 
     const onSubmit = async ()=> {
@@ -89,13 +89,13 @@ const InquireFormComponent = ({ setIsSuccessful }) => {
 
         // name
         if( formData.name.length === 0 ) {
-            setState((state)=> {
+            setErrors((state)=> {
                 return { ...state, name: 'Name cannot be empty' }
             })
             return 
         }
         if( formData.name.length < 5 ) {
-            setState((state)=> {
+            setErrors((state)=> {
                 return { ...state, name: 'Name must be atleast 5 characters' }
             })
             return 
@@ -104,13 +104,13 @@ const InquireFormComponent = ({ setIsSuccessful }) => {
         
         // email
         if( formData.email.length === 0 ) {
-            setState((state)=> {
+            setErrors((state)=> {
                 return { ...state, email: 'Email cannot be empty' }
             })
             return 
         }
         if( !validator.isEmail(formData.email) ) {
-            setState((state)=> {
+            setErrors((state)=> {
                 return { ...state, email: 'Email should be valid' }
             })
             return 
