@@ -8,7 +8,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import YoutubeIcon from '@material-ui/icons/Youtube';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import TwitterIcon from '@material-ui/icons/Twitter'
 
 
@@ -102,7 +102,7 @@ const FooterComponent = () => {
                     </Link>
 
                     <Link to={{ pathname: "https://www.instagram.com/greatmindschallenge" }} target="_blank" className="app_link footer__contact_links__link">
-                        <YoutubeIcon />
+                        <YouTubeIcon />
                     </Link>
                     
                     <Link to={{ pathname: "https://www.instagram.com/greatmindschallenge" }} target="_blank" className="app_link footer__contact_links__link">
