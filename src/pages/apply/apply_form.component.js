@@ -96,7 +96,8 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
 
     const onSubmit = async ()=> {
         setErrors(initial)
-        const url = 'https://thawing-plains-83115.herokuapp.com/mail'
+        // const url = 'https://thawing-plains-83115.herokuapp.com/mail'
+        const url = 'http://greatminds-env.eba-mf9m3psb.us-east-1.elasticbeanstalk.com/mail'
 
         setIsLoading(true)
         console.log('formData ', formData)
