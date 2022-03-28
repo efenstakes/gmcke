@@ -40,7 +40,8 @@ const WooComponent = () => {
 
     const subscribe = async ()=> {
         setErrors(initial)
-        const url = 'https://thawing-plains-83115.herokuapp.com/subscribe'
+        // const url = 'https://thawing-plains-83115.herokuapp.com/subscribe'
+        const url = 'http://greatminds-env.eba-mf9m3psb.us-east-1.elasticbeanstalk.com/subscribe'
 
         setIsLoading(true)
 
