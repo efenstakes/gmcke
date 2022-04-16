@@ -223,6 +223,12 @@ const ApplyFormComponent = ({ setIsSuccessful, setName }) => {
                         label="Individual"
                         labelPlacement="end"
                     />
+                    <FormControlLabel
+                        value="OTHER"
+                        control={<Radio color="primary" />}
+                        label="Other"
+                        labelPlacement="end"
+                    />
                 </RadioGroup>
             </FormControl>
             <VSpacerComponent space={2} />
