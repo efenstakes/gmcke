@@ -9,7 +9,9 @@ import LinkButtonComponent from '../../components/buttons/link_button.component'
 import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
 
 
-import img_1 from '../../assets/images/1.png'
+import img_1 from '../../assets/logo-new.png'
+
+
 
 import './welcome.component.scss'
 
