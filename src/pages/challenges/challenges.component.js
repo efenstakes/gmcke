@@ -5,8 +5,8 @@ import ChallengeCardComponent from '../../components/challenge_card/challenge_ca
 import VSpacerComponent from '../../components/v_spacer/v_spacer.component'
 
 
-import img_1 from '../../assets/images/Coaching on challenges page-01.png'
-import img_2 from '../../assets/images/Advisory challenges page-01.png'
+import img_1 from '../../assets/images/two.jpeg'
+import img_2 from '../../assets/images/three.jpeg'
 import img_3 from '../../assets/images/Illustration-01.png'
 // import img_1 from '../../assets/images/1.png'
 // import img_2 from '../../assets/images/2.png'
@@ -34,7 +34,7 @@ const ChallengesComponent = () => {
             made_for: [
                 'Corporates', 'Individuals', 'SME\'s'
             ],
-            imageUrl: img_1,
+            imageUrl: img_4,
         },
         {
             title: 'Coaching',
@@ -50,7 +50,7 @@ const ChallengesComponent = () => {
             made_for: [
                 'Corporates', 'Individuals', 'SME\'s',
             ],
-            imageUrl: img_4,
+            imageUrl: img_1,
         },
         {
             title: 'Business advisory',
@@ -73,7 +73,7 @@ const ChallengesComponent = () => {
         <div className="section challenges_section">
             
             <h3 className="section_title section_title__white">
-                CHALLENGES
+                We Invite you to Co-create with Us
             </h3>
             <VSpacerComponent space={4} />
 
